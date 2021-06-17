@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background-color: black;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    
+}
+body{
+    width: 100%;
+    display: block;
+    text-align:center;
+    font-size: 3.6rem;
+    margin: 0 auto;
+}
