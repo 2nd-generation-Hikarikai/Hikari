@@ -17,9 +17,9 @@
 <body>
   <header>
     <h3>beatls</h3>
-    <a href="logout.php" class="">logout</a>
-    <a href="user_playlist.php" class="">playlist</a>
-    <a href="user_edit.php" class="">プロフィール編集</a>
+    <a href="logout.php" class="btn">logout</a>
+    <a href="user_playlist.php" class="btn">playlist</a>
+    <a href="user_edit.php" class="btn">プロフィール編集</a>
     <div class="searchform">
       <input type="text" id="search" size="25" placeholder="Search">
     </div>

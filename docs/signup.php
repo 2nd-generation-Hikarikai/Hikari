@@ -16,17 +16,37 @@
 <body>
     <form action="signup_act.php" method="POST" autocomplete="off">
         <fieldset>
-            <legend>ユーザー登録画面</legend>
+            <h2>初めての方はこちら</h2>
+
             <div>
-                ユーザーネーム <input type="text" name="username">
+                name <input type="text" name="username" placeholder="name">
             </div>
             <div>
-                パスワード <input type="text" name="password">
+                email <input type="text" name="email" placeholder="email">
             </div>
+            <div>
+                性別
+                <label>
+                    男性
+                    <input type="radio" name="sex" value="">
+                </label>
+                <label>
+                    女性
+                    <input type="radio" name="sex" value="">
+                </label>
+                <label>
+                    その他
+                    <input type="radio" name="sex" value="">
+                </label>
+            </div>
+            <div>
+                password <input type="password" name="password">
+            </div>
+
             <div>
                 <button class="btn">登録する</button>
             </div>
-            <a href="index.php">ログイン画面</a>
+            <a href="login.php">ログイン画面</a>
         </fieldset>
     </form>
 

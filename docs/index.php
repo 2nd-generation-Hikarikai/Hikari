@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン画面</title>
+    <title>The Beatls</title>
     <!-- Bootstrapの読み込み -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- googlefontsの読み込み -->
@@ -14,24 +15,11 @@
 </head>
 
 <body>
-    <!-- action と method 忘れずに！ -->
-    <form action="login_act.php" method="post" autocomplete="off">
-        <fieldset>
-            <legend>ログイン画面</legend>
-            <div>
-                <!-- name属性わすれずに！dbと同じにする -->
-                ユーザーネーム <input type="text" name="username">
-            </div>
-            <div>
-                パスワード <input type="password" name="password">
-            </div>
-            <div>
-                <button class="btn">ログイン</button>
-            </div>
-            <a href="signup.php">新規登録する</a>
-        </fieldset>
-    </form>
+    <header>
+        <h3>beatls</h3>
+        <a href="login.php" class="">ログイン</a>
 
+    </header>
 </body>
 
 </html>

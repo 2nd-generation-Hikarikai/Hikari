@@ -56,16 +56,16 @@ if ($status == false) {
     <!-- googlefontsの読み込み -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 
 <body>
     <header>
         <h3>My Playlist</h3>
-        <a href="beatls.php" class="">beatls</a>
-        <a href="logout.php" class="">logout</a>
-        <a href="user_edit.php" class="">プロフィール編集</a>
+        <a href="beatls.php" class="btn">beatls</a>
+        <a href="logout.php" class="btn">logout</a>
+        <a href="user_edit.php" class="btn">プロフィール編集</a>
 
     </header>
     <main>
