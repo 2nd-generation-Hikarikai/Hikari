@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="img_rogo">
-            <img src="beatles_logo06.png" alt="aaaaaa">
+            <img src="./img/beatles_rogo06.jpg" alt="aaaaaa">
         </div>
     </header>
     <main>
