@@ -6,20 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>鬼のマッチングビートルズ</title>
-  <!-- Bootstrapの読み込み -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <!-- googlefontsの読み込み -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <h3>beatls</h3>
-    <a href="logout.php" class="">logout</a>
-    <a href="user_playlist.php" class="">playlist</a>
-    <a href="user_edit.php" class="">プロフィール編集</a>
+    <a href="logout.php" class="btn">logout</a>
+    <a href="user_playlist.php" class="btn">playlist</a>
+    <a href="user_edit.php" class="btn">プロフィール編集</a>
     <div class="searchform">
       <input type="text" id="search" size="25" placeholder="Search">
     </div>
