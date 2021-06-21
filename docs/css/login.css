@@ -105,6 +105,15 @@ input {
   pointer-events: none;
   color: white;
 }
+.done {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 12px;
+  pointer-events: none;
+  color: white;
+}
+
 .placeholder_animation1 {
   animation: action1 0.2s linear forwards;
 }
