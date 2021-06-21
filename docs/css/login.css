@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&family=RocknRoll+One&family=Rokkitt:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* background-color: black; */
+  color: white;
+  font-family: "Rokkitt", "Noto Sans JP", sans-serif;
+}
+.space_24 {
+	height: 24px;
+}
+
+body {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 2.4rem;
+  margin: 0 auto;
+  background-image: url("../img/beatles_back.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.img_rogo {
+  width: 150px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.img_rogo img {
+  width: 150px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
+main {
+  display: block;
+  padding-top: 60px;
+}
+
+.form_container {
+  background: rgba(0, 0, 0, 0.5);
+  margin: auto;
+}
+
+.form_container > div {
+  width: 400px;
+  margin: auto;
+}
+
+
+h1{
+  font-size: 24px;
+  text-align: left;
+}
+
+
+
+.input_styles {
+  background: gray;
+  width: 400px;
+  margin: auto;
+  position: relative;
+  border-radius: 5px;
+}
+
+input {
+  height: 55px;
+  width: 400px;
+  line-height: 0.4em;
+  font-size: 4em;
+  padding: 25px 0 0 5px;
+  border: 1px solid #eff3bd;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  background: black;
+}
+
+.placeholder1 {
+  position: absolute;
+  top: 5px;
+  left: 110px;
+  font-size: 18px;
+  pointer-events: none;
+  color: white;
+}
+.placeholder2 {
+  position: absolute;
+  top: 5px;
+  left: 80px;
+  font-size: 18px;
+  pointer-events: none;
+  color: white;
+}
+.placeholder_animation1 {
+  animation: action1 0.2s linear forwards;
+}
+.placeholder_animation2 {
+  animation: action2 0.2s linear forwards;
+}
+
+@keyframes action1 {
+  0% {
+    top: 5px;
+    left: 80px;
+    font-size: 16px;
+  }
+
+  100% {
+    top: 5px;
+    left: 10px;
+    font-size: 12px;
+  }
+}
+
+@keyframes action2 {
+  0% {
+    top: 5px;
+    left: 80px;
+    font-size: 16px;
+  }
+
+  100% {
+    top: 5px;
+    left: 10px;
+    font-size: 12px;
+  }
+}
+
+/*== グラデーションが流れる */
+
+.gradient1 {
+  /*ボタンの形状*/
+  display: inline-block;
+  color: #fff;
+  padding: 10px 30px;
+
+  border-radius: 30px;
+  text-decoration: none;
+  outline: none;
+  /*背景の色と形状*/
+  background: linear-gradient(270deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
+  background-position: 1% 50%;
+  background-size: 200% auto;
+  /*アニメーションの指定*/
+  transition: all 0.3s ease-out;
+}
+
+/*hoverした際の、背景の場所とテキスト色の変更*/
+.gradient1:hover {
+  color: #fff;
+  background-position: 99% 50%;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px auto;
+  color: rgb(243, 240, 240);
+  border: white 2px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-shadow: rgb(20, 30, 28) 1px 1px 2px;
+
+}
