@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ユーザー登録画面</title>
-    <!-- Bootstrapの読み込み -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- googlefontsの読み込み -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <form action="signup_act.php" method="POST" autocomplete="off">
-        <fieldset>
-            <h2>初めての方はこちら</h2>
-
+    <header>
+        <img src="img/beatles_logo02.jpeg" alt="">
+        <h2>The Beatles</h2>
+        <a href="login.php" class="btn">ログイン</a>
+    </header>
+    <main>
+        <form action="signup_act.php" method="POST" autocomplete="off">
+            <h3>初めての方はこちら</h3>
             <div>
                 name <input type="text" name="username" placeholder="name">
             </div>
@@ -44,11 +43,10 @@
             </div>
 
             <div>
-                <button class="btn">登録する</button>
+                <button class="gradient1">登録する</button>
             </div>
-            <a href="login.php">ログイン画面</a>
-        </fieldset>
-    </form>
+        </form>
+    </main>
 
 </body>
 

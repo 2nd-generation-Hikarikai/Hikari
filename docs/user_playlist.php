@@ -51,19 +51,14 @@ if ($status == false) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>playlist</title>
-    <!-- Bootstrapの読み込み -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- googlefontsの読み込み -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 
 <body>
     <header>
+        <a href="beatles.php" class="btn"><img src="img/beatles_logo02.jpeg" alt=""></a>
         <h3>My Playlist</h3>
-        <a href="beatls.php" class="btn">beatls</a>
         <a href="logout.php" class="btn">logout</a>
         <a href="user_edit.php" class="btn">プロフィール編集</a>
 

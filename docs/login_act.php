@@ -36,7 +36,7 @@ if ($status == false) {
         $_SESSION["session_id"] = session_id();
         $_SESSION["is_admin"] = $val["is_admin"];
         $_SESSION["username"] = $val["username"];
-        header("Location:beatls.php");
+        header("Location:beatles.php");
         exit();
     }
 }
