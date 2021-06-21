@@ -21,7 +21,9 @@
         <form action="login_act.php" method="post" autocomplete="off">
 
             <div class="form_container">
-                    <h1>ログイン</h1>
+                    <div>
+                        <h1>~~~~~にログイン</h1>
+                    </div>
                 <div class="input_styles">
                     <input type="text" onfocus="animation1()" onblur="animationout1()">
                     <div id="anime1" class="placeholder1">名前を入力してください</div>
@@ -37,7 +39,7 @@
                 <div class="space_24"></div>
 
                 <button class="gradient1">ログイン</button>
-                
+
                 <div class="space_24"></div>
 
             </div>
