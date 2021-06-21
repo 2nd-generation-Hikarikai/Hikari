@@ -11,11 +11,12 @@
 </head>
 
 <body>
-  <header>
+  <!-- ヘッダーをレスポンシブにしたい -->
+  <header class="header_text">
     <h3>beatls</h3>
     <a href="logout.php" class="btn">logout</a>
     <a href="user_playlist.php" class="btn">playlist</a>
-    <a href="user_edit.php" class="btn">プロフィール編集</a>
+    <a href="user_edit.php" class="btn">My Profile</a>
     <div class="searchform">
       <input type="text" id="search" size="25" placeholder="Search">
     </div>
@@ -27,37 +28,37 @@
       <p>oooo</p>
     </div>
     <div class="main_container">
+
+      <!-- <div class="row"> -->
       <div class="row">
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
-        <div class="col-2">a</div>
+        <div>
+          <div class="col-2">a</div>
+        </div>
+        <div>
+          <div class="col-2">a</div>
+        </div>
+        <div>
+          <div class="col-2">a</div>
+        </div>
+        <div>
+          <div class="col-2">a</div>
+        </div>
+        <div>
+          <div class="col-2">a</div>
+        </div>
+        <div>
+          <div class="col-2">a</div>
+        </div>
+        <div>
+          <div class="col-2">a</div>
+        </div>
+        <div>
+          <div class="col-2">a</div>
+        </div>
+        <div>
+          <div class="col-2">a</div>
+        </div>
+
       </div>
     </div>
 
