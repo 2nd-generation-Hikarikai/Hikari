@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>鬼のマッチングビートルズ</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/beatles.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -20,12 +21,62 @@
     </div>
 
   </header>
+  <main>
+    <div class="top_container">
+      <!-- メイン画面のデザイン -->
+      <p>oooo</p>
+    </div>
+    <div class="main_container">
+      <div class="row">
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+        <div class="col-2">a</div>
+      </div>
+    </div>
+
+
+
+  </main>
+  <footer>
+  </footer>
+
+
+
+
 
 
   <!-- fontawsome -->
   <script src="https://kit.fontawesome.com/b28496ef11.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 
   <script>
     $('#search').on('keyup', function(e) {
