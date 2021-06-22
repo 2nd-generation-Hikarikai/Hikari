@@ -89,6 +89,7 @@ header {
   padding: 10px;
   justify-content: space-between;
   border-bottom: 2px solid gray;
+  z-index: 5;
 }
 
 .header_text {
@@ -115,30 +116,51 @@ header {
 .main_container {
   text-align: center;
   background: white;
-  height: 1000px;
   margin: auto 30px;
 }
 
+
 .row {
-  /* margin: auto; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  list-style: none;
 }
 
-.row div > div {
+.relative {
+  position: relative;
+  width: 268px;
+  height: 208px;
+}
+
+.absolute {
   width: 260px;
   height: 200px;
   overflow-wrap: break-word;
   border: 1px solid rgb(243, 239, 239);
-  border-radius: 40px;
+  border-radius: 25px;
   margin: 4px;
+  text-align: center;
 }
 
-.row div > div:active {
+.col-2 {
+  margin: 3px auto;
+  text-align: center;
+  width: 85%;
+}
+
+.absolute:active {
   position: absolute;
-  width: 260px;
+  background: black;
+  width: 300px;
   height: 250px;
-  opacity: 0.5;
   z-index: 1;
+}
+
+.footer_container {
+  background: gray;
+  height: 400px;
+  width: 100%;
+
+  
 }
