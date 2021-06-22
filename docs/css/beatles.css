@@ -119,12 +119,12 @@ header {
   margin: auto 30px;
 }
 
-
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
+  padding: 0;
 }
 
 .relative {
@@ -177,12 +177,14 @@ margin: 5px;
 }
 
 .music_title {
+  /* animation-fill-mode: forwards; */
   padding: 10px;
   width: 80%;
   height: 40px;
   margin: auto;
   text-align: center;
-  font-size:1.5vw;
+  font-size: 1.6rem;
+  white-space: nowrap
 }
 
 /* .box {
@@ -214,8 +216,9 @@ margin: 5px;
 
 
 .absolute:hover {
-  /* transition-property: all;
-  transition-delay: 1s; */
+  /* animation-fill-mode: forwards; */
+  /* transition-property: all; */
+  /* transition-delay: 1s;  */
   position: absolute;
   top: -40px;
   left: -40px;
