@@ -6,9 +6,12 @@ $json = file_get_contents($data);
 $json_decode = json_decode($json);
 
 $names = $json_decode->feed->entry;
-
+// var_dump($names);
 // DB接続
 $pdo = connect_to_db();
+
+// "DELETE FROM music_table";
+// exit("ok");
 
 // スプレッドシートの全てを変数に格納
 foreach ($names as $name) {
@@ -20,6 +23,7 @@ foreach ($names as $name) {
   $Trivia3 = $name->{'gsx$豆知識3'}->{'$t'};
   $feel1 = $name->{'gsx$どんな感情1'}->{'$t'};
   $feel2 = $name->{'gsx$どんな感情2'}->{'$t'};
+  $music_img = $name->{'gsx$musicimg'}->{'$t'};
 
 
   $sql = "SELECT * FROM music_table WHERE music_name = :music_name";
@@ -34,7 +38,7 @@ foreach ($names as $name) {
     continue;
   } else {
     //登録されていなければinsert 
-    $sql = 'INSERT INTO music_table (music_id, music_name, Album_name, Trivia1, Trivia2, Trivia3, feel1, feel2) VALUES(NULL, :music_name, :Album_name, :Trivia1, :Trivia2 ,:Trivia3, :feel1, :feel2)';
+    $sql = 'INSERT INTO music_table (music_id, music_name, Album_name, Trivia1, Trivia2, Trivia3, feel1, feel2, music_img) VALUES(NULL, :music_name, :Album_name, :Trivia1, :Trivia2 ,:Trivia3, :feel1, :feel2, :music_img)';
    
     $stmt = $pdo->prepare($sql);
     $stmt->bindValue(':music_name', $music_name, PDO::PARAM_STR);
@@ -44,6 +48,7 @@ foreach ($names as $name) {
     $stmt->bindValue(':Trivia3', $Trivia3, PDO::PARAM_STR);
     $stmt->bindValue(':feel1', $feel1, PDO::PARAM_STR);
     $stmt->bindValue(':feel2', $feel2, PDO::PARAM_STR);
+    $stmt->bindValue(':music_img', $music_img, PDO::PARAM_STR);
     $status = $stmt->execute();
    
     if ($status == false) {
@@ -53,4 +58,7 @@ foreach ($names as $name) {
     }
   }
 }
+
+
+
 echo '全ての曲がデータベースに保存されました';

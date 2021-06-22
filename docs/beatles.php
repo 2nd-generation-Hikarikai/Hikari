@@ -31,38 +31,175 @@
 
       <!-- <div class="row"> -->
       <ul class="row">
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
-        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2 title_img">
+              <img src="./album_img/AbbeyRoad.jpg">
+            </div>
+            <div class="music_title"></div>
+            <audio controls>
+              <source src="./music/EleanorRigby.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </li>
+
+
+
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
+        <li class="relative">
+          <div class="absolute">
+            <div class="col-2">a</div>
+          </div>
+        </li>
       </ul>
     </div>
 
@@ -70,10 +207,10 @@
 
   </main>
   <footer>
-  <div class="footer_container">
-    
-a
-  </div>
+    <div class="footer_container">
+
+      a
+    </div>
   </footer>
 
 

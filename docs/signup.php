@@ -36,26 +36,26 @@ for ($i = 1; $i <= 31; $i++) {
         <form method="POST"  action="signup_act.php" > 
 
         <p>name <br>
-        <input type="text" name="username" value="" autocomplete="off"></p>
+        <input type="text" name="username" autocomplete="off" minlength="4" maxlength="10" size="10" placeholder="user_name" required></p>
 
         <p>パスワード<br>
-        <input type="password" name="password" value=""></p>
+        <input type="password" name="password" minlength="4" required></p>
 
         <p>e-mail <br>
-        <input type="email" name="email" placeholder="email"></p>
-
+        <input type="email" name="email" placeholder="email" required></p>
+    <!-- 選択しなくても行っちゃう -->
         <p>性別</p>
         <div class="gender">
-        <div><label for="">男性<input type="radio" name="sex" value=""></label></div>
-        <div><label for="">女性<input type="radio" name="sex" value=""></label></div>
-        <div><label for="">その他<input type="radio" name="sex" value=""></label></div>
+        <div><label>男性<input type="radio" name="sex" value="1"></label></div>
+        <div><label>女性<input type="radio" name="sex" value="0"></label></div>
+        <div><label>その他<input type="radio" name="sex" value="2"></label></div>
         </div>
 
         <p>恋愛対象</p>
     <select name="myselect" id="" >
-        <option value="man">男性</option>
-        <option value="woman">女性</option>
-        <option value="nbg">限定しない</option>
+        <option value="1">男性</option>
+        <option value="0">女性</option>
+        <option value="2">限定しない</option>
     </select>
 
     <!-- <p>パスワード<br>
@@ -63,10 +63,10 @@ for ($i = 1; $i <= 31; $i++) {
 
     <p>誕生日</p>
     <select name="year"><?= $year ?></select>
-    <select name="month"><?= $month ?>'</select>
+    <select name="month"><?= $month ?></select>
     <select name="day"><?= $day ?></select>
 
-        <p> <input type="submit" name="signup" value="Sign Up!(登録する)"></p>
+        <p> <input type="submit" value="Sign Up!(登録する)"></p>
 
         <p>パスワードは半角英数文字をそれぞれ1文字以上含んだ、<br>8文字以上で設定してください。</p>
         </form>

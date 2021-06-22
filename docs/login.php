@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -25,14 +27,14 @@
                     <h1>~~~~~にログイン</h1>
                 </div>
                 <div class="input_styles">
-                    <input type="text" onfocus="animation1()" onblur="animationout1()" id="input_name1">
+                    <input type="text" onfocus="animation1()" onblur="animationout1()" id="input_name1" name="username" required>
                     <div id="anime1" class="placeholder1">名前を入力してください</div>
                 </div>
 
                 <div class="space_24"></div>
 
                 <div class="input_styles">
-                    <input type="text" onfocus="animation2()" onblur="animationout2()" id="input_name2">
+                    <input type="password" onfocus="animation2()" onblur="animationout2()" id="input_name2" name="password" required>
                     <div id="anime2" class="placeholder2">パスワードを入力してください</div>
                 </div>
 
