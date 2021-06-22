@@ -7,8 +7,9 @@ check_session_id();
 //DB接続
 $pdo = connect_to_db();
 
-//SQLで参照
-$sql = 'SELECT * FROM item_table ORDER BY created_at ASC';
+
+// SELECT文変更（DB結合）
+$sql = 'SELECT * FROM playlists_table LEFT OUTER JOIN (SELECT playlist_id, COUNT(id) AS cnt FROM like_table GROUP BY todo_id) AS likes ON todo_table.id = likes.todo_id';
 
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute(); // SQLを実行 $statusに実行結果(取得したデータではない！)
