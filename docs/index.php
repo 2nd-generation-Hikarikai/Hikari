@@ -11,9 +11,9 @@
 
 <body>
     <header>
-        <img src="img/beatles_logo02.jpeg" alt="">
+        <img src="./img/beatles_rogo06.jpg" alt="aaaaaa">
         <h2>The Beatles</h2>
-        <a href="login.php" class="btn">ログイン</a>
+        <a href="login.php" class="gradient1">ログイン</a>
     </header>
 </body>
 
