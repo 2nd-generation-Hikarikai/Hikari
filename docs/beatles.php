@@ -30,42 +30,50 @@
     <div class="main_container">
 
       <!-- <div class="row"> -->
-      <div class="row">
-        <div>
-          <div class="col-2">a</div>
-        </div>
-        <div>
-          <div class="col-2">a</div>
-        </div>
-        <div>
-          <div class="col-2">a</div>
-        </div>
-        <div>
-          <div class="col-2">a</div>
-        </div>
-        <div>
-          <div class="col-2">a</div>
-        </div>
-        <div>
-          <div class="col-2">a</div>
-        </div>
-        <div>
-          <div class="col-2">a</div>
-        </div>
-        <div>
-          <div class="col-2">a</div>
-        </div>
-        <div>
-          <div class="col-2">a</div>
-        </div>
-
-      </div>
+      <ul class="row">
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+        <li class="relative"><div class="absolute"><div class="col-2">a</div></div></li>
+      </ul>
     </div>
 
 
 
   </main>
   <footer>
+  <div class="footer_container">
+    
+a
+  </div>
   </footer>
 
 
