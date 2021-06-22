@@ -191,6 +191,7 @@ margin: 5px;
 
 
 .absolute:hover {
+  /* transition-delay:1s; */
   position: absolute;
   top: -40px;
   left: -40px;
@@ -198,7 +199,10 @@ margin: 5px;
   width: 350px;
   height: 400px;
   z-index: 1;
+
 }
+
+
 
 .footer_container {
   background: gray;
