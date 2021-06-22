@@ -177,7 +177,6 @@ margin: 5px;
 }
 
 .music_title {
-  /* animation-fill-mode: forwards; */
   padding: 10px;
   width: 80%;
   height: 40px;
@@ -216,11 +215,11 @@ margin: 5px;
 
 
 .absolute:hover {
-  /* animation-fill-mode: forwards; */
-  /* transition-property: all; */
-  /* transition-delay: 1s;  */
+  transition-property: height;
+  transition-duration: 0.4s;
+	transition-delay: .8s;
   position: absolute;
-  top: -40px;
+  top: -30px;
   left: -40px;
   background: black;
   width: 350px;
