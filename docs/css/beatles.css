@@ -136,7 +136,7 @@ header {
 }
 
 .row div > div:active {
-  /* position: absolute; */
+  position: absolute;
   width: 260px;
   height: 250px;
   opacity: 0.5;
