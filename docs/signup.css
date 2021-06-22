@@ -1,0 +1,13 @@
+body{
+  width: 100%;
+    display: block;
+    text-align:center;
+    font-size: 1.0rem;
+    margin: 0 auto;
+    background: darkslategrey;
+    color: floralwhite;
+    /* font-family: 'Anton', sans-serif; */
+    font-family: 'Vollkorn', serif;
+    
+  
+}
