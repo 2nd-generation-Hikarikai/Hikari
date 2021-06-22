@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&family=RocknRoll+One&family=Rokkitt:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: black;
+  color: white;
+  font-family: "Rokkitt", "Noto Sans JP", sans-serif;
+}
+/* フレームワーク */
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-left: calc(var(--bs-gutter-x) / -2);
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+.col-1 {
+  flex: 0 0 auto;
+  width: 8.3333333333%;
+}
+.col-2 {
+  flex: 0 0 auto;
+  width: 16.6666666667%;
+}
+.col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.3333333333%;
+}
+.col-5 {
+  flex: 0 0 auto;
+  width: 41.6666666667%;
+}
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+.col-7 {
+  flex: 0 0 auto;
+  width: 58.3333333333%;
+}
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.6666666667%;
+}
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+.col-10 {
+  flex: 0 0 auto;
+  width: 83.3333333333%;
+}
+.col-11 {
+  flex: 0 0 auto;
+  width: 91.6666666667%;
+}
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 2.4rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  border-bottom: 2px solid gray;
+}
+
+.top_container {
+  background: gray;
+  width: 100%;
+  height: 700px;
+  margin-top: 80px;
+}
+
+.top_container p {
+  font-size: 30px;
+}
+/* ---メイン画面のデザイン--- */
+
+.main_container {
+  text-align: center;
+  background: white;
+  height: 1000px;
+  margin: auto 30px;
+}
+
+.row {
+  /* margin: auto; */
+  justify-content: center;
+}
+
+.row div {
+  width: 260px;
+  height: 200px;
+  overflow-wrap: break-word;
+  border: 1px solid rgb(243, 239, 239);
+  border-radius: 40px;
+  margin: 4px;
+}
