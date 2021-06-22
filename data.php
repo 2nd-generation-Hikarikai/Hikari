@@ -58,4 +58,7 @@ foreach ($names as $name) {
     }
   }
 }
+
+
+
 echo '全ての曲がデータベースに保存されました';
