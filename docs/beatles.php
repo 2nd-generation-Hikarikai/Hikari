@@ -1,4 +1,15 @@
 <?php
+// ホバーアクションを遅らせる
+// 文字を折り返しなしで全体的に表示させる
+// 左右の幅を揃える
+// 検索の勉強
+// 音楽入れる
+// サインアップ画面
+// プレイリスト
+
+
+
+
 
 
 require_once __DIR__ . '/functions.php';
@@ -9,13 +20,21 @@ $pdo = connect_to_db();
 $stmt = $pdo->prepare('SELECT * FROM music_table');
 $stmt->execute();
 $musicAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+$stmt = $pdo->prepare('SELECT * FROM music_table');
+$stmt->execute();
+$musicAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // var_dump($musicAll);
 // exit();
+
+
 $output = '';
 foreach ($musicAll as $music) {
-  $output .="
+  $output .= "
   <li class='relative'>
-  <div class='absolute'>
+  <div id='absolute' class='absolute'>
     <div class='col-2 title_img'>
       <img src='./album_img/{$music['music_img']}'>
     </div>
@@ -33,22 +52,6 @@ foreach ($musicAll as $music) {
 
 
 ?>
-        <!-- <li class="relative">
-          <div class="absolute">
-            <div class="col-2 title_img">
-              <img src="./album_img/AbbeyRoad.jpg">
-            </div>
-            <div class="music_title">A Hard Day's Night</div>
-            <audio controls>
-              <source src="./music/EleanorRigby.mp3" type="audio/mp3">
-            </audio>
-            <h3>Trivia</h3>
-            <div class="trivia">初の主演映画『ハード・デイズ・ナイト』の主題歌。</div>
-            <div class="trivia">上映館内では絶叫が飛び交い、スクリーンの4人に突進して、スクリーンが破られたというエピソードも</div>
-            <div class="trivia">初の主演映画『ハード・デイズ・ナイト』の主題歌。</div>
-          </div>
-        </li> -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +61,7 @@ foreach ($musicAll as $music) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>鬼のマッチングビートルズ</title>
   <link href="css/beatles.css" rel="stylesheet">
-
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
@@ -76,7 +79,7 @@ foreach ($musicAll as $music) {
   <main>
     <div class="top_container">
       <!-- メイン画面のデザイン -->
-      <p>oooo</p>
+      <p id="ooo">oooo</p>
     </div>
     <div class="main_container">
 
@@ -126,6 +129,11 @@ foreach ($musicAll as $music) {
 
 
   <script>
+
+
+
+
+
     $('#search').on('keyup', function(e) {
       console.log(e.target.value); //inputの内容をリアルタイムに取得する
       const searchWord = e.target.value;
