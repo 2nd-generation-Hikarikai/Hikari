@@ -129,7 +129,7 @@ header {
 
 .relative {
   position: relative;
-  width: 268px;
+  width: 270px;
   height: 208px;
   /* overflow: hidden; */
 
@@ -146,6 +146,7 @@ header {
   overflow: hidden;
 
 }
+
 
 
 
@@ -186,12 +187,12 @@ margin: 5px;
   white-space: nowrap
 }
 
-/* .box {
+.box {
   animation: box 0.3s ease-in 1s forwards;
 }
 
-@keyframes box {
-  from {
+@keyframes goUp {
+  100% {
     position: absolute;
     padding: 10px;
     width: 80%;
@@ -200,19 +201,9 @@ margin: 5px;
     text-align: center;
     font-size:1.5vw;
     z-index: 1;
-
   }
-  to {
-    position: absolute;
-    top: -40px;
-    left: -40px;
-    background: black;
-    width: 350px;
-    height: 400px;
-    z-index: 1;
-  }
-} */
 
+}
 
 .absolute:hover {
   transition-property: height;
