@@ -6,20 +6,11 @@
 // プレイリスト--津曲さん
 // ローディング画面
 
-
-
-
-
+// ---おんがぐ一覧表示---
 require_once __DIR__ . '/functions.php';
 
 // DB接続
 $pdo = connect_to_db();
-
-$stmt = $pdo->prepare('SELECT * FROM music_table');
-$stmt->execute();
-$musicAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-
 
 $stmt = $pdo->prepare('SELECT * FROM music_table');
 $stmt->execute();
@@ -35,7 +26,7 @@ foreach ($musicAll as $music) {
   <div id='absolute' class='absolute' ontouchstart>
     <div class='col-2 title_img'>
       <img src='./album_img/{$music['music_img']}'>
-   
+      <div id='like' class='like'>好</div>
     </div>
     <div class='music_title'>{$music['music_name']}</div>
     <audio controls>
@@ -48,7 +39,23 @@ foreach ($musicAll as $music) {
   </div>
 </li>";
 }
-// <div id='like' class='like'>好</div>
+// ---おんがぐ一覧表示---end---
+
+
+
+// ---プレイリストへ追加---
+$stmt = $pdo->prepare('SELECT * FROM playlists_table WHERE user_id=?');
+$stmt->execute([$_SESSION['user_id']]);
+$my_playlist = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+var_dump($my_playlist);
+exit();
+
+
+
+// ---プレイリストへ追加---end---
+
+
 
 ?>
 <!DOCTYPE html>
@@ -128,6 +135,33 @@ foreach ($musicAll as $music) {
 
 
   <script>
+
+function submitFnc(){
+  //formオブジェクトを取得する
+  var fm = document.getElementById("fm1");
+ 
+  //Submit値を操作したい場合はこんな感じでできます。
+  fm.hid1.value = "hoge";  // 例）name="hid1"の値を"hoge"にする
+ 
+  //Submit形式指定する（post/get）
+  fm.method = "post";  // 例）POSTに指定する
+ 
+  //targetを指定する
+  fm.target = "_blank";  // 例）新しいウィンドウに表示
+ 
+  //action先を指定する
+  fm.action = "/php/sample.php";  // 例）"/php/sample.php"に指定する
+ 
+  //Submit実行
+  fm.submit();
+}
+
+
+
+
+
+
+
     $('#search').on('keyup', function(e) {
       console.log(e.target.value); //inputの内容をリアルタイムに取得する
       const searchWord = e.target.value;
