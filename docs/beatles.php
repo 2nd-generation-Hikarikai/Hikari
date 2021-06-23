@@ -6,17 +6,39 @@
 // プレイリスト--津曲さん
 // ローディング画面
 
-// ---おんがぐ一覧表示---
+session_start();
 require_once __DIR__ . '/functions.php';
 
 // DB接続
 $pdo = connect_to_db();
+
+
+
+// ---プレイリストへ追加---
+$stmt = $pdo->prepare('SELECT * FROM playlists_table WHERE user_id=?');
+$stmt->execute([$_SESSION['user_id']]);
+$my_playlist = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// var_dump($my_playlist);
+// exit('ok');
+// $push = "";
+// foreach ($my_playlist as $list) {
+//   $push .= "
+//   <li class='playlist_li'>{$list['playlist_name']}</li>
+//   <input type='hidden' value='{$list['playlist_id']}'>
+//   <input type='hidden' value='{$music['music_id']}'>
+//   ";
+// }
+
+// ---プレイリストへ追加---end---
+
+// ---おんがぐ一覧表示---
 
 $stmt = $pdo->prepare('SELECT * FROM music_table');
 $stmt->execute();
 $musicAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // var_dump($musicAll);
 // exit();
+
 
 
 $output = '';
@@ -37,23 +59,25 @@ foreach ($musicAll as $music) {
     <div class='trivia'>{$music['Trivia2']}</div>
     <div class='trivia'>{$music['Trivia3']}</div>
   </div>
-</li>";
+  <ul class='playlist_ul'>
+  ";
+  foreach ($my_playlist as $list) {
+    $output .= "
+    <li class='playlist_li' id='fm'>{$list['playlist_name']}</li>
+    <input type='hidden' value='{$list['playlist_id']}'>
+    <input type='hidden' value='{$music['music_id']}'>
+    ";
+  }
+  $output .= "
+  </ul>
+</li>
+";
 }
 // ---おんがぐ一覧表示---end---
 
 
 
-// ---プレイリストへ追加---
-$stmt = $pdo->prepare('SELECT * FROM playlists_table WHERE user_id=?');
-$stmt->execute([$_SESSION['user_id']]);
-$my_playlist = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-var_dump($my_playlist);
-exit();
-
-
-
-// ---プレイリストへ追加---end---
 
 
 
@@ -135,26 +159,27 @@ exit();
 
 
   <script>
+    function submitFnc() {
+      //formオブジェクトを取得する
+      var fm = document.getElementById("fm");
 
-function submitFnc(){
-  //formオブジェクトを取得する
-  var fm = document.getElementById("fm1");
- 
-  //Submit値を操作したい場合はこんな感じでできます。
-  fm.hid1.value = "hoge";  // 例）name="hid1"の値を"hoge"にする
- 
-  //Submit形式指定する（post/get）
-  fm.method = "post";  // 例）POSTに指定する
- 
-  //targetを指定する
-  fm.target = "_blank";  // 例）新しいウィンドウに表示
- 
-  //action先を指定する
-  fm.action = "/php/sample.php";  // 例）"/php/sample.php"に指定する
- 
-  //Submit実行
-  fm.submit();
-}
+      //Submit値を操作したい場合はこんな感じでできます。
+      // 例）name="hid1"の値を"hoge"にする
+      // fm.hid1.value = "hoge";
+
+      //Submit形式指定する（post/get）
+      fm.method = "post"; // 例）POSTに指定する
+
+      //targetを指定する
+      // 例）新しいウィンドウに表示
+      // fm.target = "_blank"; 
+
+      //action先を指定する
+      fm.action = "/php/sample.php"; // 例）"/php/sample.php"に指定する
+
+      //Submit実行
+      fm.submit();
+    }
 
 
 
@@ -165,11 +190,12 @@ function submitFnc(){
     $('#search').on('keyup', function(e) {
       console.log(e.target.value); //inputの内容をリアルタイムに取得する
       const searchWord = e.target.value;
-      const requestUrl = 'ajax_get.php'; //リクエスト送信先のファイル名
+      const requestUrl = './ajax_get.php'; //リクエスト送信先のファイル名
 
       // phpへリクエストを送って結果を出力する処理
       axios.get(`${requestUrl}?searchword=${searchWord}`) // リクエストを送信する
         .then(function(response) {
+          console.log(response);
           console.log(response.data); // responseにPHPから送られたデータが入る
 
           // ブラウザに表示する処理

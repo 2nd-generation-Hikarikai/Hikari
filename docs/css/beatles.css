@@ -233,6 +233,29 @@ margin: 5px;
   z-index: 1;
 }
 
+
+/* プレイリスト */
+.playlist_ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  text-align: left;
+  z-index: 10;
+}
+
+.playlist_li {
+padding-top: 8px;
+font-size: 16px;
+}
+
+
+
+
+
+/* フッター */
 .footer_container {
   background: gray;
   height: 400px;
