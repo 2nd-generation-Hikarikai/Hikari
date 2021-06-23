@@ -67,6 +67,17 @@ if ($status == false) {
     </header>
     <main>
 
+        <form action="user_playlist_create.php" method="POST">
+            <fieldset>
+
+                <div>
+                    プレイリスト名<input type="text" name="playlist_name">
+                </div>
+                <button class="gradient1">プレイリストを作成</button>
+                </div>
+            </fieldset>
+        </form>
+
         <ul>
             <!-- ここに<li>でphpデータが入る -->
             <?= $output ?>
