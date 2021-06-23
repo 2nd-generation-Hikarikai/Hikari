@@ -178,6 +178,7 @@ margin: 5px;
   bottom: 10px;
   right: 20px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 
@@ -246,9 +247,24 @@ margin: 5px;
   z-index: 10;
 }
 
+.none {
+  display: none;
+  pointer-events: none;
+}
+
 .playlist_li {
 padding-top: 8px;
 font-size: 16px;
+}
+
+.mask {
+	background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 9;
 }
 
 

@@ -42,13 +42,13 @@ $musicAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 $output = '';
-foreach ($musicAll as $music) {
+foreach ($musicAll as $key => $music) {
   $output .= "
   <li class='relative'>
   <div id='absolute' class='absolute' ontouchstart>
     <div class='col-2 title_img'>
       <img src='./album_img/{$music['music_img']}'>
-      <div id='like' class='like'>好</div>
+      <div id='like-{$key}' class='like' onclick='getId(this)'>好</div>
     </div>
     <div class='music_title'>{$music['music_name']}</div>
     <audio controls>
@@ -59,7 +59,7 @@ foreach ($musicAll as $music) {
     <div class='trivia'>{$music['Trivia2']}</div>
     <div class='trivia'>{$music['Trivia3']}</div>
   </div>
-  <ul class='playlist_ul'>
+  <ul class='playlist_ul none' id='playlist_ul-{$key}' onclick='getId(this)';>
   ";
   foreach ($my_playlist as $list) {
     $output .= "
@@ -115,7 +115,6 @@ foreach ($musicAll as $music) {
 
       <!-- <div class="row"> -->
       <ul class="row">
-
         <!-- <li class="relative">
           <div class="absolute">
             <div class="col-2 title_img">
@@ -132,11 +131,9 @@ foreach ($musicAll as $music) {
           </div>
         </li> -->
         <?= $output ?>
-
-
       </ul>
     </div>
-
+<div id="mask"></div>
 
 
   </main>
@@ -180,6 +177,70 @@ foreach ($musicAll as $music) {
       //Submit実行
       fm.submit();
     }
+
+    const array_30 = [];
+    for (let i = 0; i < 30; ++i) {
+      array_30.push(document.getElementById("like-" + i));
+      console.log(array_30);
+
+    }
+    let playlist_ul;
+    const mask = document.getElementById('mask');
+    mask.addEventListener('click',() => {
+      mask.classList.remove('mask');
+      playlist_ul.classList.add('none');
+    });
+
+    function getId(ele) {
+        let id_value = ele.id; // eleのプロパティとしてidを取得
+        const w = id_value.split('-');
+        // console.log(w);
+        const id_key = w[1];
+        const key__ = parseInt(id_key);
+        console.log(key__);
+        // console.log(array_30[key__]);
+
+      const id_name = "playlist_ul-" + key__;
+       playlist_ul = document.getElementById(id_name);
+
+      playlist_ul.classList.remove('none');
+      mask.classList.add('mask');
+    }
+
+
+
+
+    
+
+
+    // console.log(likeID);
+
+    // function aaa() {
+    //   const key = likeID.split('-');
+    //   console.log(key);
+    //   return key;
+    // }
+    // aaa();
+    
+
+
+
+
+
+
+
+    // const like = document.getElementById('like');
+    // const playlist_ul = document.getElementById('playlist_ul0');
+    // like.addEventListener('click',() => {
+    //   if (playlist_ul.classList.contains('none') == true) {
+    //     playlist_ul.classList.remove('none');
+    //   } else {
+    //     playlist_ul.classList.add('none');
+    //   }
+    // });
+
+
+
 
 
 

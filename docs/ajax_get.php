@@ -3,7 +3,7 @@
 include("./functions.php");
 // var_dump($_GET);
 //コンソールのネットワークで確認する
-// var_dump($_GET);
+var_dump($_GET);
 // exit();
 
 $search_word = $_GET["searchword"]; // GETでデータ受け取り
