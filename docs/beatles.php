@@ -6,20 +6,32 @@
 // プレイリスト--津曲さん
 // ローディング画面
 
-
-
-
-
-require_once __DIR__ . '/functions.php';
+session_start();
+include("functions.php");
+// require_once __DIR__ . './functions.php';
+// exit('ok');
 
 // DB接続
 $pdo = connect_to_db();
 
-$stmt = $pdo->prepare('SELECT * FROM music_table');
-$stmt->execute();
-$musicAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// ---プレイリストへ追加---
+$stmt = $pdo->prepare('SELECT * FROM playlists_table WHERE user_id=?');
+$stmt->execute([$_SESSION['user_id']]);
+$my_playlist = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// var_dump($my_playlist);
+// exit('ok');
+// $push = "";
+// foreach ($my_playlist as $list) {
+//   $push .= "
+//   <li class='playlist_li'>{$list['playlist_name']}</li>
+//   <input type='hidden' value='{$list['playlist_id']}'>
+//   <input type='hidden' value='{$music['music_id']}'>
+//   ";
+// }
 
+// ---プレイリストへ追加---end---
 
+// ---おんがぐ一覧表示---
 
 $stmt = $pdo->prepare('SELECT * FROM music_table');
 $stmt->execute();
@@ -28,14 +40,17 @@ $musicAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // exit();
 
 
+
 $output = '';
-foreach ($musicAll as $music) {
+foreach ($musicAll as $key => $music) {
   $output .= "
   <li class='relative'>
   <div id='absolute' class='absolute' ontouchstart>
     <div class='col-2 title_img'>
       <img src='./album_img/{$music['music_img']}'>
-   
+      <div id='like-{$key}' class='like' onclick='getId(this)'>
+        <span class='fas fa-heart color'></span>
+      </div>
     </div>
     <div class='music_title'>{$music['music_name']}</div>
     <audio controls>
@@ -46,9 +61,24 @@ foreach ($musicAll as $music) {
     <div class='trivia'>{$music['Trivia2']}</div>
     <div class='trivia'>{$music['Trivia3']}</div>
   </div>
-</li>";
+  <ul class='playlist_ul none' id='playlist_ul-{$key}' onclick='getId(this)';>
+  ";
+  foreach ($my_playlist as $list) {
+    $output .= "
+    <form id='fm'>
+    <li class='playlist_li' onclick='submitFnc()'>{$list['playlist_name']}</li>
+      <input type='hidden' name='playlist_id' value='{$list['playlist_id']}'>
+      <input type='hidden' name='music_id' value='{$music['music_id']}'>
+    </form>
+    ";
+  }
+  $output .= "
+  </ul>
+</li>
+";
 }
-// <div id='like' class='like'>好</div>
+// ---おんがぐ一覧表示---end---
+
 
 ?>
 <!DOCTYPE html>
@@ -60,7 +90,8 @@ foreach ($musicAll as $music) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>鬼のマッチングビートルズ</title>
   <link href="css/beatles.css" rel="stylesheet">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -84,7 +115,6 @@ foreach ($musicAll as $music) {
 
       <!-- <div class="row"> -->
       <ul class="row">
-
         <!-- <li class="relative">
           <div class="absolute">
             <div class="col-2 title_img">
@@ -101,11 +131,9 @@ foreach ($musicAll as $music) {
           </div>
         </li> -->
         <?= $output ?>
-
-
       </ul>
     </div>
-
+<div id="mask"></div>
 
 
   </main>
@@ -128,14 +156,114 @@ foreach ($musicAll as $music) {
 
 
   <script>
+
+
+    const array_30 = [];
+    for (let i = 0; i < 30; ++i) {
+      array_30.push(document.getElementById("like-" + i));
+      console.log(array_30);
+
+    }
+    let playlist_ul;
+    const mask = document.getElementById('mask');
+    mask.addEventListener('click',() => {
+      mask.classList.remove('mask');
+      playlist_ul.classList.add('none');
+    });
+
+    function getId(ele) {
+        let id_value = ele.id; // eleのプロパティとしてidを取得
+        const w = id_value.split('-');
+        // console.log(w);
+        const id_key = w[1];
+        const key__ = parseInt(id_key);
+        // console.log(key__);
+        console.log(array_30[key__]);
+
+      const id_name = "playlist_ul-" + key__;
+       playlist_ul = document.getElementById(id_name);
+
+      playlist_ul.classList.remove('none');
+      mask.classList.add('mask');
+    }
+
+    let fm = document.getElementById("fm");
+
+    function submitFnc() {
+      //formオブジェクトを取得する
+
+      //Submit値を操作したい場合はこんな感じでできます。
+      // 例）name="hid1"の値を"hoge"にする
+      // fm.hid1.value = "hoge";
+
+      //Submit形式指定する（post/get）
+      fm.method = "post"; // 例）POSTに指定する
+
+      //targetを指定する
+      // 例）新しいウィンドウに表示
+      // fm.target = "_blank"; 
+
+      //action先を指定する
+      fm.action = "beatles_act.php"; // 例）"/php/sample.php"に指定する
+
+      //Submit実行
+      fm.submit();
+    }
+
+    // function postDB() {
+
+    // }
+
+
+
+
+    
+
+
+    // console.log(likeID);
+
+    // function aaa() {
+    //   const key = likeID.split('-');
+    //   console.log(key);
+    //   return key;
+    // }
+    // aaa();
+    
+
+
+
+
+
+
+
+    // const like = document.getElementById('like');
+    // const playlist_ul = document.getElementById('playlist_ul0');
+    // like.addEventListener('click',() => {
+    //   if (playlist_ul.classList.contains('none') == true) {
+    //     playlist_ul.classList.remove('none');
+    //   } else {
+    //     playlist_ul.classList.add('none');
+    //   }
+    // });
+
+
+
+
+
+
+
+
+
+
     $('#search').on('keyup', function(e) {
       console.log(e.target.value); //inputの内容をリアルタイムに取得する
       const searchWord = e.target.value;
-      const requestUrl = 'ajax_get.php'; //リクエスト送信先のファイル名
+      const requestUrl = './ajax_get.php'; //リクエスト送信先のファイル名
 
       // phpへリクエストを送って結果を出力する処理
       axios.get(`${requestUrl}?searchword=${searchWord}`) // リクエストを送信する
         .then(function(response) {
+          console.log(response);
           console.log(response.data); // responseにPHPから送られたデータが入る
 
           // ブラウザに表示する処理

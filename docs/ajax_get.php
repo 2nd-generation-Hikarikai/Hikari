@@ -1,9 +1,9 @@
 <?php
 // 関数読み込み
-include("functions.php");
-
-//コンソールのネットワークで確認する
+include("./functions.php");
 // var_dump($_GET);
+//コンソールのネットワークで確認する
+var_dump($_GET);
 // exit();
 
 $search_word = $_GET["searchword"]; // GETでデータ受け取り
@@ -11,7 +11,7 @@ $search_word = $_GET["searchword"]; // GETでデータ受け取り
 // db連携
 $pdo = connect_to_db();
 
-$sql = "SELECT * FROM item_table WHERE material LIKE :search_word";
+$sql = "SELECT * FROM music_table WHERE Trivia1 AND  Trivia2 AND  Trivia3 LIKE :search_word";
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':search_word', "%{$search_word}%", PDO::PARAM_STR);
