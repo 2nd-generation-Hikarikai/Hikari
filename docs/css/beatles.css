@@ -154,38 +154,79 @@ header {
   margin: 0 auto;
   text-align: center;
   width: 100%;
-  height: 150px;
+  height: 160px;
   overflow: hidden;
 }
 
 .title_img img {
   width: 100%;
-  height: 150px;
+  height: 160px;
   object-fit: cover;
 }
 
+.relative h3  {
+font-size: 16px;
+padding: 0;
+margin: 5px;
+}
+
+.trivia {
+  text-align: initial;
+  font-size: 12px;
+  padding: 5px;
+}
+
 .music_title {
-  background: orange;
-  padding-left: 5px;
+  padding: 10px;
   width: 80%;
   height: 40px;
   margin: auto;
+  text-align: center;
+  font-size:1.5vw;
 }
 
+/* .box {
+  animation: box 0.3s ease-in 1s forwards;
+}
+
+@keyframes box {
+  from {
+    position: absolute;
+    padding: 10px;
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    text-align: center;
+    font-size:1.5vw;
+    z-index: 1;
+
+  }
+  to {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    background: black;
+    width: 350px;
+    height: 400px;
+    z-index: 1;
+  }
+} */
 
 
-.absolute:active {
+.absolute:hover {
+  /* transition-property: all;
+  transition-delay: 1s; */
   position: absolute;
+  top: -40px;
+  left: -40px;
   background: black;
-  width: 300px;
-  height: 250px;
+  width: 350px;
+  height: 400px;
   z-index: 1;
 }
 
 .footer_container {
   background: gray;
   height: 400px;
-  width: 100%;
-
-  
+  width: 100%; 
 }
