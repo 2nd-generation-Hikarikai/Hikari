@@ -56,8 +56,7 @@
 
             <h2 class="transparent">ああああああ</h2>
 
-            <form action="signup.php" method="post" autocomplete="off" class="transparent">
-
+            <!-- <form action="signup.php" method="post" autocomplete="off" class="transparent">
                 <div class="transparent">
                     <p class="transparent">メールアドレスを入力してサインアップ開始！</p>
                 </div>
@@ -66,10 +65,8 @@
                 </div>
                 <div class="space_24 transparent"></div>
                 <button class="gradient1">はじめる</button>
-
         </div>
-
-        </form>
+        </form> -->
         </div>
 
     </main>

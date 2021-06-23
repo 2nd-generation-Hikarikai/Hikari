@@ -1,10 +1,10 @@
 <?php
-// ホバーアクションを遅らせる
-// 検索の勉強
+// ホバーアクションを遅らせる--ok--
+// 検索の勉強--森重さん
 // 音楽入れる
 // サインアップ画面
-// プレイリスト
-
+// プレイリスト--津曲さん
+// ローディング画面
 
 
 
@@ -35,6 +35,7 @@ foreach ($musicAll as $music) {
   <div id='absolute' class='absolute' ontouchstart>
     <div class='col-2 title_img'>
       <img src='./album_img/{$music['music_img']}'>
+   
     </div>
     <div class='music_title'>{$music['music_name']}</div>
     <audio controls>
@@ -47,7 +48,7 @@ foreach ($musicAll as $music) {
   </div>
 </li>";
 }
-
+// <div id='like' class='like'>好</div>
 
 ?>
 <!DOCTYPE html>
