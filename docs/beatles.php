@@ -61,7 +61,7 @@ foreach ($musicAll as $key => $music) {
     <div class='trivia'>{$music['Trivia2']}</div>
     <div class='trivia'>{$music['Trivia3']}</div>
   </div>
-  <ul class='playlist_ul none' id='playlist_ul-{$key}' onclick='getId(this)';>
+  <ul class='playlist_ul none' id='playlist_ul-{$key}' onclick='getId(this)'>
   ";
   foreach ($my_playlist as $list) {
     $output .= "
@@ -214,12 +214,6 @@ foreach ($musicAll as $key => $music) {
 
     // }
 
-
-
-
-    
-
-
     // console.log(likeID);
 
     // function aaa() {
@@ -229,13 +223,6 @@ foreach ($musicAll as $key => $music) {
     // }
     // aaa();
     
-
-
-
-
-
-
-
     // const like = document.getElementById('like');
     // const playlist_ul = document.getElementById('playlist_ul0');
     // like.addEventListener('click',() => {
