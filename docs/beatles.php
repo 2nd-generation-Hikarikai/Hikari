@@ -7,12 +7,12 @@
 // ローディング画面
 
 session_start();
-require_once __DIR__ . '/functions.php';
+include("functions.php");
+// require_once __DIR__ . './functions.php';
+// exit('ok');
 
 // DB接続
 $pdo = connect_to_db();
-
-
 
 // ---プレイリストへ追加---
 $stmt = $pdo->prepare('SELECT * FROM playlists_table WHERE user_id=?');
@@ -63,9 +63,12 @@ foreach ($musicAll as $key => $music) {
   ";
   foreach ($my_playlist as $list) {
     $output .= "
-    <li class='playlist_li' id='fm'>{$list['playlist_name']}</li>
-    <input type='hidden' value='{$list['playlist_id']}'>
-    <input type='hidden' value='{$music['music_id']}'>
+    <form id='fm'>
+    <li class='playlist_li' onclick='submitFnc()'>{$list['playlist_name']}</li>
+  
+      <input type='hidden' name='playlist_id' value='{$list['playlist_id']}'>
+      <input type='hidden' name='music_id' value='{$music['music_id']}'>
+    </form>
     ";
   }
   $output .= "
@@ -156,27 +159,7 @@ foreach ($musicAll as $key => $music) {
 
 
   <script>
-    function submitFnc() {
-      //formオブジェクトを取得する
-      var fm = document.getElementById("fm");
 
-      //Submit値を操作したい場合はこんな感じでできます。
-      // 例）name="hid1"の値を"hoge"にする
-      // fm.hid1.value = "hoge";
-
-      //Submit形式指定する（post/get）
-      fm.method = "post"; // 例）POSTに指定する
-
-      //targetを指定する
-      // 例）新しいウィンドウに表示
-      // fm.target = "_blank"; 
-
-      //action先を指定する
-      fm.action = "/php/sample.php"; // 例）"/php/sample.php"に指定する
-
-      //Submit実行
-      fm.submit();
-    }
 
     const array_30 = [];
     for (let i = 0; i < 30; ++i) {
@@ -197,8 +180,8 @@ foreach ($musicAll as $key => $music) {
         // console.log(w);
         const id_key = w[1];
         const key__ = parseInt(id_key);
-        console.log(key__);
-        // console.log(array_30[key__]);
+        // console.log(key__);
+        console.log(array_30[key__]);
 
       const id_name = "playlist_ul-" + key__;
        playlist_ul = document.getElementById(id_name);
@@ -206,6 +189,33 @@ foreach ($musicAll as $key => $music) {
       playlist_ul.classList.remove('none');
       mask.classList.add('mask');
     }
+
+    let fm = document.getElementById("fm");
+
+    function submitFnc() {
+      //formオブジェクトを取得する
+
+      //Submit値を操作したい場合はこんな感じでできます。
+      // 例）name="hid1"の値を"hoge"にする
+      // fm.hid1.value = "hoge";
+
+      //Submit形式指定する（post/get）
+      fm.method = "post"; // 例）POSTに指定する
+
+      //targetを指定する
+      // 例）新しいウィンドウに表示
+      // fm.target = "_blank"; 
+
+      //action先を指定する
+      fm.action = "beatles_act.php"; // 例）"/php/sample.php"に指定する
+
+      //Submit実行
+      fm.submit();
+    }
+
+    // function postDB() {
+
+    // }
 
 
 
