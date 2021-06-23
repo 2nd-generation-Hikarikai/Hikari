@@ -67,8 +67,8 @@ foreach ($musicAll as $music) {
   <header class="header_text">
     <h3>beatls</h3>
     <a href="logout.php" class="btn">logout</a>
-    <a href="user_playlist.php" class="btn">playlist</a>
-    <a href="user_edit.php" class="btn">My Profile</a>
+    <a href="user_mypage.php" class="btn">playlist</a>
+    <a href="user_mypage.php" class="btn">My Profile</a>
     <div class="searchform">
       <input type="text" id="search" size="25" placeholder="Search">
     </div>
@@ -127,11 +127,6 @@ foreach ($musicAll as $music) {
 
 
   <script>
-
-
-
-
-
     $('#search').on('keyup', function(e) {
       console.log(e.target.value); //inputの内容をリアルタイムに取得する
       const searchWord = e.target.value;

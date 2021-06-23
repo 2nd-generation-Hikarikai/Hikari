@@ -8,14 +8,19 @@ check_session_id();
 $pdo = connect_to_db();
 
 
-// SELECT文変更（DB結合）
-$sql = 'SELECT * FROM playlists_table LEFT OUTER JOIN (SELECT playlist_id, COUNT(id) AS cnt FROM like_table GROUP BY todo_id) AS likes ON todo_table.id = likes.todo_id';
+// 空っぽのプレイリストの表示
+// $sql = "SELECT * FROM playlists_table";
+
+
+// プレイリスト名・曲名・曲・画像を表示する
+// SELECT文（DB結合）
+$sql = 'SELECT * FROM playlists_table LEFT OUTER JOIN playlist_create_table ON playlists_table.playlist_id = playlist_create_table.playlist_id';
 
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute(); // SQLを実行 $statusに実行結果(取得したデータではない！)
 
 
-// 失敗時にエラーを出力し，成功時は登録画面に戻る
+// // 失敗時にエラーを出力し，成功時は登録画面に戻る
 if ($status == false) {
     $error = $stmt->errorInfo();  // データ登録失敗時にエラーを表示
     exit('sqlError:' . $error[2]);
@@ -27,14 +32,11 @@ if ($status == false) {
         // var_dump($result);
         // exit;
         $output .= '<li class="border">';
-        $output .= '<div class="flex"><div class="imgBox"><img src="img/' . $record["image"] . '" ></div>';
-        $output .= '<div class="descriptiionList"><h2>作品名 : ' . $record["title"] . '</h2>';
-        $output .= '<p>素材 :  ' . $record["material"] . ' 制作日 : ' . $record["production_date"] . ' 制作した年齢 : ' . $record["production_age"] . ' 歳</p>';
-        $output .= '<p>作品の説明 : ' . $record["description"] . '</p>';
-        $output .= '<h3>金額 : ' . $record["value"] . ' 円</h3></div>';
+        $output .= '<img src="img/' . $record["music_img"] . '" >';
+        $output .= '<h2>' . $record["music_name"] . '</h2>';
+
         // edit deleteリンクを追加
-        $output .= "<a href='item_edit.php?id={$record["id"]}' class='btn'>編集</a>";
-        $output .= "<a href='item_delete.php?id={$record["id"]}' class='btn'>削除</a></div>";
+
         $output .= '</li>';
     }
     // $recordの参照を解除する．解除しないと，再度foreachした場合に最初からループしない
@@ -65,6 +67,17 @@ if ($status == false) {
 
     </header>
     <main>
+
+        <form action="user_playlist_create.php" method="POST">
+            <fieldset>
+
+                <div>
+                    <input type="text" name="playlist_name" placeholder="playlist name">
+                </div>
+                <button class="gradient1">プレイリストを作成</button>
+                </div>
+            </fieldset>
+        </form>
 
         <ul>
             <!-- ここに<li>でphpデータが入る -->
