@@ -18,8 +18,8 @@ if ( // 入力チェック(未入力の場合は弾く，commentのみ任意)
 $playlist_id = $_POST['playlist_id'];
 $music_id = $_POST['music_id'];
 
-var_dump($playlist_id);
-var_dump($music_id);
+// var_dump($playlist_id);
+// var_dump($music_id);
 
   // SQL作成&実行
   $sql = "INSERT INTO playlist_create_table(create_id, playlist_id, music_id, created_at) VALUES(NULL, :playlist_id, :music_id, sysdate())";
@@ -38,6 +38,6 @@ var_dump($music_id);
   } else {
     // 登録ページへ移動
     // exit('fini');
-    // header('Location:abeet.php');
+    header('Location:beatles.php');
     // echo '投稿できました！';
   }

@@ -48,7 +48,9 @@ foreach ($musicAll as $key => $music) {
   <div id='absolute' class='absolute' ontouchstart>
     <div class='col-2 title_img'>
       <img src='./album_img/{$music['music_img']}'>
-      <div id='like-{$key}' class='like' onclick='getId(this)'>好</div>
+      <div id='like-{$key}' class='like' onclick='getId(this)'>
+        <span class='fas fa-heart color'></span>
+      </div>
     </div>
     <div class='music_title'>{$music['music_name']}</div>
     <audio controls>
@@ -65,7 +67,6 @@ foreach ($musicAll as $key => $music) {
     $output .= "
     <form id='fm'>
     <li class='playlist_li' onclick='submitFnc()'>{$list['playlist_name']}</li>
-  
       <input type='hidden' name='playlist_id' value='{$list['playlist_id']}'>
       <input type='hidden' name='music_id' value='{$music['music_id']}'>
     </form>
@@ -79,11 +80,6 @@ foreach ($musicAll as $key => $music) {
 // ---おんがぐ一覧表示---end---
 
 
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +90,8 @@ foreach ($musicAll as $key => $music) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>鬼のマッチングビートルズ</title>
   <link href="css/beatles.css" rel="stylesheet">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+
 </head>
 
 <body>

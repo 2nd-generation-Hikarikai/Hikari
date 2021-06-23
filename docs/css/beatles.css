@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   font-size: 62.5%;
-  background-color: black;
+
   color: white;
   font-family: "Rokkitt", "Noto Sans JP", sans-serif;
 }
@@ -76,6 +76,7 @@ body {
   text-align: center;
   font-size: 2.4rem;
   margin: 0 auto;
+  background-color: black;
 }
 
 header {
@@ -90,6 +91,7 @@ header {
   justify-content: space-between;
   border-bottom: 2px solid gray;
   z-index: 5;
+  background: black;
 }
 
 .header_text {
@@ -115,7 +117,7 @@ header {
 
 .main_container {
   text-align: center;
-  background: white;
+  /* background: white; */
   margin: auto 30px;
 }
 
@@ -180,6 +182,9 @@ margin: 5px;
   font-size: 20px;
   cursor: pointer;
 }
+/* .color {
+  font-size: 30px;
+} */
 
 
 /* .oudio_Size {
@@ -234,7 +239,6 @@ margin: 5px;
   z-index: 1;
 }
 
-
 /* プレイリスト */
 .playlist_ul {
   list-style: none;
@@ -242,9 +246,13 @@ margin: 5px;
   margin: 0;
   position: absolute;
   top: 0;
-  left: 10px;
-  text-align: left;
+  left: -10px;
+  /* text-align: left; */
   z-index: 10;
+}
+
+#fm {
+  width: 300px;
 }
 
 .none {
@@ -252,9 +260,17 @@ margin: 5px;
   pointer-events: none;
 }
 
+
 .playlist_li {
-padding-top: 8px;
+padding: 10px 0 0px;
+margin: 4px;
 font-size: 16px;
+/* width: 100%; */
+text-align: center;
+font-family: sans-serif;
+white-space: nowrap;
+
+
 }
 
 .mask {
@@ -267,6 +283,11 @@ font-size: 16px;
 	z-index: 9;
 }
 
+.color {
+  color: green;
+  font-size: 32px;
+  background: rgba(0,0,0,0);
+}
 
 
 
