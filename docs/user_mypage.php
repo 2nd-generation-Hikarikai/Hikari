@@ -32,8 +32,7 @@ if ($status == false) {
         // var_dump($result);
         // exit;
         $output .= '<li class="border">';
-        $output .= '<img src="img/' . $record["music_img"] . '" >';
-        $output .= '<h2>' . $record["music_name"] . '</h2>';
+        $output .= '<a href="#">' . $record["playlist_name"] . '</a>';
 
         // edit deleteリンクを追加
 
@@ -69,14 +68,11 @@ if ($status == false) {
     <main>
 
         <form action="user_playlist_create.php" method="POST">
-            <fieldset>
-
-                <div>
-                    <input type="text" name="playlist_name" placeholder="playlist name">
-                </div>
-                <button class="gradient1">プレイリストを作成</button>
-                </div>
-            </fieldset>
+            <div>
+                <input type="text" name="playlist_name" placeholder="playlist name">
+            </div>
+            <button class="gradient1">プレイリストを作成</button>
+            </div>
         </form>
 
         <ul>
