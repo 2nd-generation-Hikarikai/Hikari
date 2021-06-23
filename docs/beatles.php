@@ -1,7 +1,5 @@
 <?php
 // ホバーアクションを遅らせる
-// 文字を折り返しなしで全体的に表示させる
-// 左右の幅を揃える
 // 検索の勉強
 // 音楽入れる
 // サインアップ画面
@@ -34,7 +32,7 @@ $output = '';
 foreach ($musicAll as $music) {
   $output .= "
   <li class='relative'>
-  <div id='absolute' class='absolute'>
+  <div id='absolute' class='absolute' ontouchstart>
     <div class='col-2 title_img'>
       <img src='./album_img/{$music['music_img']}'>
     </div>
