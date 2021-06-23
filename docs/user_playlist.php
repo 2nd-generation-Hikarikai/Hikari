@@ -8,6 +8,7 @@ check_session_id();
 $pdo = connect_to_db();
 
 
+// プレイリストの表示
 // SELECT文変更（DB結合）
 $sql = 'SELECT * FROM playlists_table LEFT OUTER JOIN (SELECT playlist_id, COUNT(id) AS cnt FROM like_table GROUP BY todo_id) AS likes ON todo_table.id = likes.todo_id';
 
