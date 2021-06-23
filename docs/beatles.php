@@ -28,11 +28,10 @@ $my_playlist = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //   <input type='hidden' value='{$music['music_id']}'>
 //   ";
 // }
-
 // ---プレイリストへ追加---end---
 
-// ---おんがぐ一覧表示---
 
+// ---おんがぐ一覧表示---
 $stmt = $pdo->prepare('SELECT * FROM music_table');
 $stmt->execute();
 $musicAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
