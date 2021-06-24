@@ -140,14 +140,9 @@ foreach ($musicAll as $key => $music) {
   <footer>
     <div class="footer_container">
 
-      a
+      
     </div>
   </footer>
-
-
-
-
-
 
   <!-- fontawsome -->
   <script src="https://kit.fontawesome.com/b28496ef11.js" crossorigin="anonymous"></script>
@@ -245,14 +240,6 @@ foreach ($musicAll as $key => $music) {
     //     playlist_ul.classList.add('none');
     //   }
     // });
-
-
-
-
-
-
-
-
 
 
     $('#search').on('keyup', function(e) {
