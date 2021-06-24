@@ -73,7 +73,7 @@ foreach ($musicAll as $key => $music) {
   foreach ($my_playlist as $list) {
     $output .= "
     <form id='fm-{$list['playlist_id']}'>
-    <li class='playlist_li' onclick='submitFnc({$list['playlist_id']}, {$music['music_id']})'>{$list['playlist_name']}</li>
+    <li class='playlist_li' onclick='submitFnc({$list['playlist_id']}, {$list['music_id']})'>{$list['playlist_name']}</li>
       <input type='hidden' name='playlist_id'>
       <input type='hidden' name='music_id'>
     </form>

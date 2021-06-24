@@ -1,4 +1,17 @@
 <?php
+include("functions.php");
+session_start();
+$pdo = connect_to_db();
+
+if (isset($_SESSION['EMAIL'])) {
+    header('Location: //localhost/myfile_lab05/Hikari/docs/login.php');
+    exit;
+  } else {
+    echo '';
+  }
+
+
+
 for ($i = 1920; $i <= 2020; $i++) {
     $year .= '<option value="' . $i . '">' . $i . '年</option>';
 }

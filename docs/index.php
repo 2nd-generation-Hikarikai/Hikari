@@ -13,7 +13,7 @@
 <body>
     <header>
         <img src="./img/beatles_logo05.png" alt="aaaaaa">
-        <a href="login.php" class="gradient1">login</a>
+        <!-- <a href="login.php" class="gradient1">login</a> -->
     </header>
     <main>
         <ul class="img_wrap">
@@ -77,9 +77,10 @@
 
     </main>
     <script>
-        setTimeout(function() {
-            window.location.href = 'https://localhost/myfile_lab05/Hikari/docs/signup.php';
-        }, 4000);
+        // 発表ちゅうは見せたいから自動ページ遷移はなし
+        // setTimeout(function() {
+        //     window.location.href = 'https://localhost/myfile_lab05/Hikari/docs/signup.php';
+        // }, 4000);
     </script>
 </body>
 
