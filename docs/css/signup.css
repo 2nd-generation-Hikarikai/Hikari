@@ -1,29 +1,223 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&family=RocknRoll+One&family=Rokkitt:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&family=RocknRoll+One&family=Rokkitt:wght@400;700&display=swap");
 
-*{
-    box-sizing: border-box;
-    font-size: 70.5%;
-    background-color: black;
-    color: white;
-    font-family: 'Rokkitt', 'Noto Sans JP', sans-serif;
+* {
+  box-sizing: border-box;
+  font-size: 70.5%;
+  background-color: black;
+  color: white;
+  font-family: "Rokkitt", "Noto Sans JP", sans-serif;
 }
-body{
-    width: 100%;
-    display: block;
-    text-align:center;
-    font-size: 4.0rem;
-    margin: 0 auto;
+body {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 4rem;
+  margin: 0 auto;
 }
 header {
-    display: flex;
-    position: fixed;
-    height: 60px;
-    width: 100%;
-    align-items: center;
-    padding: 10px;
-    justify-content: space-between;
+  display: flex;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
 }
 
+main {
+  display: block;
+  padding-top: 60px;
+}
+.flex {
+  display: flex;
+  width: 100%;
+}
+.btn {
+  display: inline-block;
+  margin: 10px auto;
+  color: white;
+  border: white 2px;
+  border-radius: 30px;
+}
+
+/* input{
+    display: block;
+    width: 30%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px auto;
+} */
+
+.gender {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  margin: auto;
+}
+.gender div {
+  margin: 12px;
+}
+
+
+.beatles {
+  font-size: 30px;
+}
+.info {
+  font-size: 20px;
+}
+p {
+  font-size: 20px;
+}
+/* input {
+  font-size: 1.5em;
+} */
+
+input {
+  font-size: 100%;
+}
+
+/* --インプットタグのアニメーション 消さないで↓↓↓↓↓-- */
+.space_24 {
+  height: 24px;
+}
+
+.input_styles {
+  /* background: gray; */
+  width: 400px;
+  margin: auto;
+  position: relative;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  height: 55px;
+  width: 400px;
+  line-height: 0.4em;
+  font-size: 2em;
+  padding: 25px 0 0 5px;
+  border: 1px solid #eff3bd;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  background: black;
+}
+
+.placeholder1 {
+  position: absolute;
+  top: 5px;
+  left: 110px;
+  font-size: 18px;
+  pointer-events: none;
+  color: white;
+}
+.placeholder2 {
+  position: absolute;
+  top: 5px;
+  left: 80px;
+  font-size: 18px;
+  pointer-events: none;
+  color: white;
+}
+.placeholder3 {
+  position: absolute;
+  top: 5px;
+  left: 65px;
+  font-size: 18px;
+  pointer-events: none;
+  color: white;
+}
+.done {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 12px;
+  pointer-events: none;
+  color: white;
+}
+
+.placeholder_animation1 {
+  animation: action1 0.2s linear forwards;
+}
+.placeholder_animation2 {
+  animation: action2 0.2s linear forwards;
+}
+.placeholder_animation3 {
+  animation: action2 0.2s linear forwards;
+}
+
+@keyframes action1 {
+  0% {
+    top: 5px;
+    left: 80px;
+    font-size: 16px;
+  }
+
+  100% {
+    top: 5px;
+    left: 10px;
+    font-size: 12px;
+  }
+}
+
+@keyframes action2 {
+  0% {
+    top: 5px;
+    left: 80px;
+    font-size: 16px;
+  }
+
+  100% {
+    top: 5px;
+    left: 10px;
+    font-size: 12px;
+  }
+}
+@keyframes action3 {
+  0% {
+    top: 5px;
+    left: 80px;
+    font-size: 16px;
+  }
+
+  100% {
+    top: 5px;
+    left: 10px;
+    font-size: 12px;
+  }
+}
+/* ------------------------- */
+
+/*== グラデーションが流れる */
+/* 
+.gradient1{
+    ボタンの形状
+    display: inline-block;
+    color:#fff;
+    padding: 10px 30px;
+    
+    border-radius:30px;
+    text-decoration: none;
+    outline: none;
+    /*背景の色と形状*/
+/* background: linear-gradient(270deg,  #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
+    background-position: 1% 50%;
+    background-size: 200% auto;
+    アニメーションの指定 */
+/* transition: all 0.3s ease-out;
+}
+
+hoverした際の、背景の場所とテキスト色の変更
+.gradient1:hover {
+    color: #fff;
+    background-position: 99% 50%;
+} */
+
+header>img{
+    height: 80px;
+}
 main{
     display: block;
     padding-top: 60px;
@@ -39,8 +233,8 @@ main{
     border: white 2px;
     border-radius: 30px;
 }
-
-/* input{
+/* 
+input{
     display: block;
     width: 30%;
     padding: 10px;
@@ -48,153 +242,11 @@ main{
     margin: 10px auto;
 } */
 
-.gender{
-  text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 900px;
-    margin: auto;
-    
-}
-
-.beatles{
-  font-size: 30px;
-}
-.info{
-font-size: 20px;
-}
-p{
-  font-size: 20px;
-}
-input{
-  font-size:1.5em;
-
-}
-
-input {
-  font-size: 100%;
-  }
-  
-
-/* --インプットタグのアニメーション 消さないで↓↓↓↓↓-- */
-.space_24 {
-	height: 24px;
-}
-
-.input_styles {
-    background: gray;
-    width: 400px;
-    margin: auto;
-    position: relative;
-    border-radius: 5px;
-  }
-  
-  input[type="text"], 
-  input[type="email"], 
-  input[type="password"]  {
-    height: 55px;
-    width: 400px;
-    line-height: 0.4em;
-    font-size: 4em;
-    padding: 25px 0 0 5px;
-    border: 1px solid #eff3bd;
-    border-radius: 5px;
-    letter-spacing: 3px;
-    background: black;
-  }
-  
-  .placeholder1 {
-    position: absolute;
-    top: 5px;
-    left: 110px;
-    font-size: 18px;
-    pointer-events: none;
-    color: white;
-  }
-  .placeholder2 {
-    position: absolute;
-    top: 5px;
-    left: 80px;
-    font-size: 18px;
-    pointer-events: none;
-    color: white;
-  }
-  .placeholder3 {
-    position: absolute;
-    top: 5px;
-    left: 65px;
-    font-size: 18px;
-    pointer-events: none;
-    color: white;
-  }
-  .done {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    font-size: 12px;
-    pointer-events: none;
-    color: white;
-  }
-  
-  .placeholder_animation1 {
-    animation: action1 0.2s linear forwards;
-  }
-  .placeholder_animation2 {
-    animation: action2 0.2s linear forwards;
-  }
-  .placeholder_animation3 {
-    animation: action2 0.2s linear forwards;
-  }
-  
-  @keyframes action1 {
-    0% {
-      top: 5px;
-      left: 80px;
-      font-size: 16px;
-    }
-  
-    100% {
-      top: 5px;
-      left: 10px;
-      font-size: 12px;
-    }
-  }
-  
-  @keyframes action2 {
-    0% {
-      top: 5px;
-      left: 80px;
-      font-size: 16px;
-    }
-  
-    100% {
-      top: 5px;
-      left: 10px;
-      font-size: 12px;
-    }
-  }
-  @keyframes action3 {
-    0% {
-      top: 5px;
-      left: 80px;
-      font-size: 16px;
-    }
-  
-    100% {
-      top: 5px;
-      left: 10px;
-      font-size: 12px;
-    }
-  }
-/* ------------------------- */
-
-
 
 /*== グラデーションが流れる */
-/* 
+
 .gradient1{
-    ボタンの形状
+    /*ボタンの形状*/
     display: inline-block;
     color:#fff;
     padding: 10px 30px;
@@ -203,15 +255,15 @@ input {
     text-decoration: none;
     outline: none;
     /*背景の色と形状*/
-    /* background: linear-gradient(270deg,  #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
+    background: linear-gradient(270deg,  #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
     background-position: 1% 50%;
     background-size: 200% auto;
-    アニメーションの指定 */
-    /* transition: all 0.3s ease-out;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease-out;
 }
 
-hoverした際の、背景の場所とテキスト色の変更
+/*hoverした際の、背景の場所とテキスト色の変更*/
 .gradient1:hover {
     color: #fff;
     background-position: 99% 50%;
-} */ 
+}
