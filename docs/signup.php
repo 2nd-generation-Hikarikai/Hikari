@@ -26,12 +26,12 @@ for ($i = 1; $i <= 31; $i++) {
 <body>
     <header>
         <img src="img/beatles_logo02.jpeg" alt="">
-        <h2>The Beatles</h2>
+        <h2 class="beatles">The Beatles</h2>
         <a href="login.php" class="btn">ログイン</a>
     </header>
     <main>
 
-        <h2 class="info">初めての方はこちら</h2>
+        <h3 class="info">初めての方はこちらから</h3>
 
         <form method="POST" action="signup_act.php" autocomplete="off">
 
@@ -71,9 +71,9 @@ for ($i = 1; $i <= 31; $i++) {
             <!-- 選択しなくても行っちゃう -->
             <p>性別</p>
             <div class="gender">
-                <div><label>男性<input type="radio" name="sex" value="1"></label></div>
-                <div><label>女性<input type="radio" name="sex" value="0"></label></div>
-                <div><label>その他<input type="radio" name="sex" value="2"></label></div>
+                <div><label>男性<input type="radio" name="sex" value="1" style="transform:scale(1.5);"></label></div>
+                <div><label>女性<input type="radio" name="sex" value="0" style="transform:scale(1.5);"></label></div>
+                <div><label>その他<input type="radio" name="sex" value="2" style="transform:scale(1.5);"></label></div>
             </div>
 
             <p>恋愛対象</p>
@@ -169,7 +169,7 @@ for ($i = 1; $i <= 31; $i++) {
 </script>
 
 </html>
-//
+
 <!-- 
 // <form action="signup_act.php" method="POST" autocomplete="off">
 //             <h3>初めての方はこちら</h3>
