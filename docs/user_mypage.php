@@ -13,7 +13,8 @@ $pdo = connect_to_db();
 
 // プレイリスト名・曲名・曲・画像を表示する
 // SELECT文（DB結合）
-$sql = 'SELECT * FROM playlist_create_table INNER JOIN playlists_table ON playlists_table.playlist_id = playlist_create_table.playlist_id
+$sql = 'SELECT * FROM music_table INNER JOIN playlist_create_table ON music_table.music_id = playlist_create_table.music_id
+INNER JOIN playlists_table ON playlists_table.playlist_id = playlist_create_table.playlist_id
 INNER JOIN music_table ON playlist_create_table.music_id = music_table.music_id';
 
 $stmt = $pdo->prepare($sql);
@@ -89,7 +90,7 @@ unset($record);
 
 <body>
     <header>
-        <a href="beatles.php" class="btn"><img src="img/beatles_logo05.png" alt=""></a>
+        <a href="beatles.php" class="btn"><img src="img/beatles_logo05.png" alt="" height="60px"></a>
         <h3>My Playlist</h3>
         <a href="logout.php" class="btn">logout</a>
         <a href="user_edit.php" class="btn">プロフィール編集</a>
