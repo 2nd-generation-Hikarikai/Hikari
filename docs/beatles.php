@@ -1,11 +1,11 @@
 <?php
 // ホバーアクションを遅らせる--ok--
-// 検索の勉強--森重さん--ok--
-// 音楽入れる--ok--
-// サインアップ画面--ok--
-// プレイリスト--津曲さん--ok--
+// 検索の勉強--森重さん
+// 音楽入れる
+// サインアップ画面
+// プレイリスト--津曲さん
 // ローディング画面
-// liの背景変えてみる--ok--
+// liの背景変えてみる
 
 
 session_start();
@@ -60,7 +60,7 @@ foreach ($musicAll as $key => $music) {
       </div>
     </div>
     <div class='music_title'>{$music['music_name']}</div>
-    <audio controls id='audio'>
+    <audio controls>
       <source src='./music/{$music['music_name']}.mp3'>
     </audio>
     <h3>Trivia</h3>
@@ -118,20 +118,26 @@ foreach ($musicAll as $key => $music) {
 
     <form method='post' action="ajax_get.php">
       <select name="myselect" id="search" class="select">
+        <option value="元気を出したい">元気を出したい</option>
+        <option value="気合をいれたい">気合をいれたい</option>
         <option value="楽しい">楽しい</option>
         <option value="嬉しい">嬉しい</option>
         <option value="悲しい">悲しい</option>
         <option value="孤独を感じる">孤独を感じる</option>
-        <option value="どうでもいい">どうでもいい</option>
+        <option value="投げやりな気分。">投げやりな気分。</option>
+        <option value="現実世界を離れたい…">現実世界を離れたい…</option>
         <option value="虚しい">虚しい</option>
         <option value="切ない">切ない</option>
+        <option value="辛い">辛い</option>
         <option value="人恋しい">人恋しい</option>
-        <option value="助けて欲しい">助けて欲しい</option>
-        <option value="眠りたい">眠りたい</option>
-        <option value="もの悲しい気分">もの悲しい気分</option>
+        <option value="誰かに助けてほしい">誰かに助けてほしい</option>
+        <option value="眠たい">眠たい</option>
+        <option value="物悲しい気分に浸りたい">物悲しい気分に浸りたい</option>
+        <option value="旅に出たい。">旅に出たい。</option>
         <option value="衝撃を味わいたい">衝撃を味わいたい</option>
         <option value="愛が欲しい">愛が欲しい</option>
         <option value="刺激が欲しい">刺激が欲しい</option>
+        <option value="昔を思い返したい">昔を思い返したい</option>
         <option value="リラックスしたい">リラックスしたい</option>
         <option value="ほんわかしたい">ほんわかしたい</option>
         <option value="泣きたい">泣きたい</option>
@@ -148,7 +154,6 @@ foreach ($musicAll as $key => $music) {
 
     <!-- 
 <audio controls src="music/2-12 Let It Be.mp3"></audio>
-
 <audio controls>
       <source src='./music/2-12 Let It Be.mp3'>
     </audio> -->
@@ -193,7 +198,6 @@ foreach ($musicAll as $key => $music) {
   </main>
   <!-- <footer>
     <div class="footer_container">
-
       
     </div>
   </footer> -->
@@ -268,51 +272,6 @@ foreach ($musicAll as $key => $music) {
       fm.submit();
     }
 
-
-    // 音楽を重複再生できないようにする
-    const audio = document.getElementById('audio');
-    var audios = document.querySelectorAll("audio");
-    for (var i = 0; i < audios.length; i++) {
-      audios[i].addEventListener("play", function() {
-        for (var j = 0; j < audios.length; j++) {
-          if (audios[j] != this) {
-            audios[j].pause()
-          }
-        }
-      }, false);
-    }
-    // audio.addEventListener('click', () => {
-    //     if (audio.play()) {
-    //       pauseVideo();
-    //     }
-    // });
-
-
-    // function pauseVideo() {
-    //   //動画を一時停止
-    //   audio.pause();
-    // }
-
-    //     (function(){
-    //     let playingAudio = null;
-    //     let audioList = document.querySelectorAll("audio");
-
-    //     let playAudioHandler = function playingAudioHandler(event){
-    //         if(playingAudio && playingAudio !== event.target){
-    //             playingAudio.pause();
-    //             // 停止時に位置を最初にする場合は下↓のコメントを外す
-    //             // playingAudio.currentTime = 0;
-    //         }
-    //         playingAudio = event.target;
-    //     }
-
-    //     for(let i = 0, l = audioList.length; i < l; i++){
-    //         audioList[i].addEventListener("play", playAudioHandler);
-    //     }
-    // })();
-
-
-
     // function postDB() {
 
     // }
@@ -337,39 +296,53 @@ foreach ($musicAll as $key => $music) {
     // });
 
 
-    $('#search').on('keyup', function(e) {
-      console.log(e.target.value); //inputの内容をリアルタイムに取得する
-      const searchWord = e.target.value;
-      const requestUrl = './ajax_get.php'; //リクエスト送信先のファイル名
+    // 音楽を重複再生できないようにする
+    const audio = document.getElementById('audio');
+    var audios = document.querySelectorAll("audio");
+    for (var i = 0; i < audios.length; i++) {
+      audios[i].addEventListener("play", function() {
+        for (var j = 0; j < audios.length; j++) {
+          if (audios[j] != this) {
+            audios[j].pause()
+          }
+        }
+      }, false);
+    }
 
-      // phpへリクエストを送って結果を出力する処理
-      axios.get(`${requestUrl}?searchword=${searchWord}`) // リクエストを送信する
-        .then(function(response) {
-          console.log(response);
-          console.log(response.data); // responseにPHPから送られたデータが入る
 
-          // ブラウザに表示する処理
-          const tagArray = [];
-          response.data.forEach(function(x) {
-            tagArray.push(`<tr><td>${x.deadline}</td><td>${x.todo}</td><tr>`)
-            tagArray.push(
-              `<li class="border">
-                                <div class="flex"><div class="imgBox"><img src="img/${x.image}"></div>
-                                <div class="descriptiionList">
-                                    <h2>作品名 : ${x.title}</h2>
-                                    <p>素材 :  ${x.material}  制作日 : ${x.production_date}   制作した年齢 : ${x.production_age} 歳</p>
-                                    <p>作品の説明 : ${x.description}</p>
-                                    <h3>金額 : ${x.value} 円</h3>
-                                    
-                                </div>
-                            </li>`)
-          });
-          $('#results').html(tagArray);
+    // $('#search').on('keyup', function(e) {
+    //   console.log(e.target.value); //inputの内容をリアルタイムに取得する
+    //   const searchWord = e.target.value;
+    //   const requestUrl = './ajax_get.php'; //リクエスト送信先のファイル名
 
-        });
-      // .catch(function (error) { })
-      // .finally(function () { });
-    });
+    //   // phpへリクエストを送って結果を出力する処理
+    //   axios.get(`${requestUrl}?searchword=${searchWord}`) // リクエストを送信する
+    //     .then(function(response) {
+    //       console.log(response);
+    //       console.log(response.data); // responseにPHPから送られたデータが入る
+
+    //       // ブラウザに表示する処理
+    //       const tagArray = [];
+    //       response.data.forEach(function(x) {
+    //         tagArray.push(`<tr><td>${x.deadline}</td><td>${x.todo}</td><tr>`)
+    //         tagArray.push(
+    //           `<li class="border">
+    //                             <div class="flex"><div class="imgBox"><img src="img/${x.image}"></div>
+    //                             <div class="descriptiionList">
+    //                                 <h2>作品名 : ${x.title}</h2>
+    //                                 <p>素材 :  ${x.material}  制作日 : ${x.production_date}   制作した年齢 : ${x.production_age} 歳</p>
+    //                                 <p>作品の説明 : ${x.description}</p>
+    //                                 <h3>金額 : ${x.value} 円</h3>
+
+    //                             </div>
+    //                         </li>`)
+    //       });
+    //       $('#results').html(tagArray);
+
+    //     });
+    //   // .catch(function (error) { })
+    //   // .finally(function () { });
+    // });
   </script>
 </body>
 
