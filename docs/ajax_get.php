@@ -11,7 +11,7 @@ $myselect = $_POST["myselect"];
 
 // db連携
 $pdo = connect_to_db();
-$sql = "SELECT * FROM music_table WHERE feel1 LIKE :myselect"; 
+$sql = "SELECT * FROM music_table WHERE feel1 LIKE :myselect";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':myselect', "%{$myselect}%", PDO::PARAM_STR);
 $status = $stmt->execute();
@@ -28,7 +28,7 @@ if ($status == false) {
     $error = $stmt->errorInfo();
     echo json_encode(["error_msg" => "{$error[2]}"]);
     exit();
-    } else {
+} else {
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $output = "";
     foreach ($musicAll as $key => $music) {
@@ -65,29 +65,39 @@ if ($status == false) {
         </ul>
         </li>
         ";
-        }
-    unset($value);
     }
-    
-    ?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-    <div>今の貴方にオススメの曲です。</div>
-    <ul class="row">
-    <?= $output ?>
-    <input type="button" onclick="history.back()" value="戻る">
-    
-        
-    </body>
-    </html>
-    
+    unset($value);
+}
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended</title>
+    <link href="css/ajax.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="beatles.php"><img src="img/beatles_logo05.png" alt="" height="60px"></a>
+        <h2><i class="fas fa-record-vinyl"></i> Recommended</h2>
+        <input type="button" onclick="history.back()" class="gradient1" value="戻る">
+    </header>
+    <main>
+
+        <ul class="row">
+            <?= $output ?>
+
+    </main>
+    <script src="https://kit.fontawesome.com/b28496ef11.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
 
 <!-- 
 // if ($status == false) {

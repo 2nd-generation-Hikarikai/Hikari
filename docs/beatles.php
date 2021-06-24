@@ -1,11 +1,11 @@
 <?php
 // ホバーアクションを遅らせる--ok--
-// 検索の勉強--森重さん--ok--
-// 音楽入れる--ok--
-// サインアップ画面--ok--
-// プレイリスト--津曲さん--ok--
+// 検索の勉強--森重さん
+// 音楽入れる
+// サインアップ画面
+// プレイリスト--津曲さん
 // ローディング画面
-// liの背景変えてみる--ok--
+// liの背景変えてみる
 
 
 session_start();
@@ -60,7 +60,7 @@ foreach ($musicAll as $key => $music) {
       </div>
     </div>
     <div class='music_title'>{$music['music_name']}</div>
-    <audio controls id='audio'>
+    <audio controls>
       <source src='./music/{$music['music_name']}.mp3'>
     </audio>
     <h3>Trivia</h3>
@@ -112,7 +112,6 @@ foreach ($musicAll as $key => $music) {
       <input type="text" id="search" size="25" placeholder="Search">
     </div> -->
 
-
 <!-- 感情検索表示 -->
 <p class="feel">How are you feeling now?</p>
 
@@ -155,7 +154,6 @@ foreach ($musicAll as $key => $music) {
 
 
 <audio controls src="music/2-12 Let It Be.mp3"></audio>
-
 <audio controls>
       <source src='./music/2-12 Let It Be.mp3'>
     </audio> --> 
@@ -200,7 +198,6 @@ foreach ($musicAll as $key => $music) {
   </main>
   <!-- <footer>
     <div class="footer_container">
-
       
     </div>
   </footer> -->
@@ -275,51 +272,6 @@ foreach ($musicAll as $key => $music) {
       fm.submit();
     }
 
-
-    // 音楽を重複再生できないようにする
-    const audio = document.getElementById('audio');
-    var audios = document.querySelectorAll("audio");
-    for (var i = 0; i < audios.length; i++) {
-      audios[i].addEventListener("play", function() {
-        for (var j = 0; j < audios.length; j++) {
-          if (audios[j] != this) {
-            audios[j].pause()
-          }
-        }
-      }, false);
-    }
-    // audio.addEventListener('click', () => {
-    //     if (audio.play()) {
-    //       pauseVideo();
-    //     }
-    // });
-
-
-    // function pauseVideo() {
-    //   //動画を一時停止
-    //   audio.pause();
-    // }
-
-    //     (function(){
-    //     let playingAudio = null;
-    //     let audioList = document.querySelectorAll("audio");
-
-    //     let playAudioHandler = function playingAudioHandler(event){
-    //         if(playingAudio && playingAudio !== event.target){
-    //             playingAudio.pause();
-    //             // 停止時に位置を最初にする場合は下↓のコメントを外す
-    //             // playingAudio.currentTime = 0;
-    //         }
-    //         playingAudio = event.target;
-    //     }
-
-    //     for(let i = 0, l = audioList.length; i < l; i++){
-    //         audioList[i].addEventListener("play", playAudioHandler);
-    //     }
-    // })();
-
-
-
     // function postDB() {
 
     // }
@@ -344,39 +296,53 @@ foreach ($musicAll as $key => $music) {
     // });
 
 
-    $('#search').on('keyup', function(e) {
-      console.log(e.target.value); //inputの内容をリアルタイムに取得する
-      const searchWord = e.target.value;
-      const requestUrl = './ajax_get.php'; //リクエスト送信先のファイル名
+    // 音楽を重複再生できないようにする
+    const audio = document.getElementById('audio');
+    var audios = document.querySelectorAll("audio");
+    for (var i = 0; i < audios.length; i++) {
+      audios[i].addEventListener("play", function() {
+        for (var j = 0; j < audios.length; j++) {
+          if (audios[j] != this) {
+            audios[j].pause()
+          }
+        }
+      }, false);
+    }
 
-      // phpへリクエストを送って結果を出力する処理
-      axios.get(`${requestUrl}?searchword=${searchWord}`) // リクエストを送信する
-        .then(function(response) {
-          console.log(response);
-          console.log(response.data); // responseにPHPから送られたデータが入る
 
-          // ブラウザに表示する処理
-          const tagArray = [];
-          response.data.forEach(function(x) {
-            tagArray.push(`<tr><td>${x.deadline}</td><td>${x.todo}</td><tr>`)
-            tagArray.push(
-              `<li class="border">
-                                <div class="flex"><div class="imgBox"><img src="img/${x.image}"></div>
-                                <div class="descriptiionList">
-                                    <h2>作品名 : ${x.title}</h2>
-                                    <p>素材 :  ${x.material}  制作日 : ${x.production_date}   制作した年齢 : ${x.production_age} 歳</p>
-                                    <p>作品の説明 : ${x.description}</p>
-                                    <h3>金額 : ${x.value} 円</h3>
-                                    
-                                </div>
-                            </li>`)
-          });
-          $('#results').html(tagArray);
+    // $('#search').on('keyup', function(e) {
+    //   console.log(e.target.value); //inputの内容をリアルタイムに取得する
+    //   const searchWord = e.target.value;
+    //   const requestUrl = './ajax_get.php'; //リクエスト送信先のファイル名
 
-        });
-      // .catch(function (error) { })
-      // .finally(function () { });
-    });
+    //   // phpへリクエストを送って結果を出力する処理
+    //   axios.get(`${requestUrl}?searchword=${searchWord}`) // リクエストを送信する
+    //     .then(function(response) {
+    //       console.log(response);
+    //       console.log(response.data); // responseにPHPから送られたデータが入る
+
+    //       // ブラウザに表示する処理
+    //       const tagArray = [];
+    //       response.data.forEach(function(x) {
+    //         tagArray.push(`<tr><td>${x.deadline}</td><td>${x.todo}</td><tr>`)
+    //         tagArray.push(
+    //           `<li class="border">
+    //                             <div class="flex"><div class="imgBox"><img src="img/${x.image}"></div>
+    //                             <div class="descriptiionList">
+    //                                 <h2>作品名 : ${x.title}</h2>
+    //                                 <p>素材 :  ${x.material}  制作日 : ${x.production_date}   制作した年齢 : ${x.production_age} 歳</p>
+    //                                 <p>作品の説明 : ${x.description}</p>
+    //                                 <h3>金額 : ${x.value} 円</h3>
+
+    //                             </div>
+    //                         </li>`)
+    //       });
+    //       $('#results').html(tagArray);
+
+    //     });
+    //   // .catch(function (error) { })
+    //   // .finally(function () { });
+    // });
   </script>
 </body>
 
