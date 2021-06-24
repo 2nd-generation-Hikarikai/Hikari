@@ -5,8 +5,8 @@ include("functions.php");
 // require_once __DIR__ . './functions.php';
 $pdo = connect_to_db();
 
-var_dump($_POST);
-exit('ok');
+// var_dump($_POST);
+// exit('ok');
 
 if ( // 入力チェック(未入力の場合は弾く，commentのみ任意)
   !isset($_POST['playlist_id']) || $_POST['playlist_id'] == '' ||
