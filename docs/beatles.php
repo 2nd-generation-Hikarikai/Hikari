@@ -104,19 +104,66 @@ foreach ($musicAll as $key => $music) {
 <body>
   <!-- ヘッダーをレスポンシブにしたい -->
   <header class="header_text">
-    <h3>beatls</h3>
+    <h3>beatles</h3>
     <a href="logout.php" class="btn">logout</a>
     <a href="user_mypage.php" class="btn">playlist</a>
-    <a href="user_mypage.php" class="btn">My Profile</a>
-    <div class="searchform">
+    <!-- <a href="user_mypage.php" class="btn">My Profile</a> -->
+    <!-- <div class="searchform">
       <input type="text" id="search" size="25" placeholder="Search">
-    </div>
+    </div> -->
 
+<!-- 感情検索表示 -->
+<p class="feel">How are you feeling now?</p>
+
+
+<form  method ='post'  action="ajax_get.php">
+    <select name="myselect" id="search" class="select">
+          <option value="楽しい">楽しい</option>
+          <option value="嬉しい">嬉しい</option>
+          <option value="悲しい">悲しい</option>
+          <option value="孤独を感じる">孤独を感じる</option>
+          <option value="どうでもいい">どうでもいい</option>
+          <option value="虚しい">虚しい</option>
+          <option value="切ない">切ない</option>
+          <option value="人恋しい">人恋しい</option>
+          <option value="助けて欲しい">助けて欲しい</option>
+          <option value="眠りたい">眠りたい</option>
+          <option value="もの悲しい気分">もの悲しい気分</option>
+          <option value="衝撃を味わいたい">衝撃を味わいたい</option>
+          <option value="愛が欲しい">愛が欲しい</option>
+          <option value="刺激が欲しい">刺激が欲しい</option>
+          <option value="リラックスしたい">リラックスしたい</option>
+          <option value="ほんわかしたい">ほんわかしたい</option>
+          <option value="泣きたい">泣きたい</option>
+          <option value="腹が立つ">腹がたつ</option>
+          <option value="勇気づけられたい">勇気づけられたい</option>
+          <option value="誕生日を祝いたい">誕生日を祝いたい・祝って欲しい</option>
+          <option value="癒されたい">癒されたい</option>
+    </select>
+  
+  <!-- <button type="submit" name="name" onclick="location.href='./ajax_get.php'" value="値">送信</button> -->
+  <input type="submit" onclick="location.href='ajax_get.php'" value="送信"name="name" class="input" >
+  
+</form>
+
+<!-- 
+<audio controls src="music/2-12 Let It Be.mp3"></audio>
+
+<audio controls>
+      <source src='./music/2-12 Let It Be.mp3'>
+    </audio> -->
+
+<div id ="results"></div>
+
+<!-- 感情検索表示終わり -->
   </header>
   <main>
     <div class="top_container">
+    <img src="./img/get.back.jpg" alt="" width="900px" > 
       <!-- メイン画面のデザイン -->
-      <p id="ooo">oooo</p>
+      <p id="title">映画『ゲット・バック』が2021年11月25日に世界同時劇場公開！<br>
+      42分間の「ルーフトップ・コンサート」を含む60時間の未発表映像、 <br>
+      150時間の未発表音源を再編集</p>
     </div>
     <div class="main_container">
 
