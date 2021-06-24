@@ -2,7 +2,7 @@
 
 *{
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 70.5%;
     background-color: black;
     color: white;
     font-family: 'Rokkitt', 'Noto Sans JP', sans-serif;
@@ -11,20 +11,20 @@ body{
     width: 100%;
     display: block;
     text-align:center;
-    font-size: 2.4rem;
+    font-size: 4.0rem;
     margin: 0 auto;
 }
 header {
     display: flex;
     position: fixed;
     height: 60px;
-    width: 100%;
+    width: 85%;
     align-items: center;
     padding: 10px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 header>img{
-    height: 60px;
+    height: 10px;
 }
 main{
     display: block;
@@ -51,12 +51,33 @@ main{
 } */
 
 .gender{
+  text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 900px;
+    margin: auto;
     
 }
 
+.beatles{
+  font-size: 30px;
+}
+.info{
+font-size: 20px;
+}
+p{
+  font-size: 15px;
+}
+input{
+  font-size:1.5em;
+
+}
+
+input {
+  font-size: 100%;
+  }
+  
 
 /* --インプットタグのアニメーション　消さないで↓↓↓↓↓-- */
 .space_24 {

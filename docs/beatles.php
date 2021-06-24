@@ -147,16 +147,11 @@ foreach ($musicAll as $key => $music) {
   <!-- <footer>
     <div class="footer_container">
 
-      a
+      
     </div>
   </footer> -->
 
 
-
-
-
-
-  
 
 
 
@@ -250,14 +245,6 @@ foreach ($musicAll as $key => $music) {
     //     playlist_ul.classList.add('none');
     //   }
     // });
-
-
-
-
-
-
-
-
 
 
     $('#search').on('keyup', function(e) {
