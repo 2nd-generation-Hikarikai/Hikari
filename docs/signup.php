@@ -20,14 +20,13 @@ for ($i = 1; $i <= 31; $i++) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ユーザー登録画面</title>
     <link href="css/signup.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
 </head>
 
 <body>
     <header>
-        <img src="img/beatles_logo02.jpeg" alt="">
-        <h2 class="beatles">The Beatles</h2>
-        <a href="login.php" class="btn">ログイン</a>
+        <img src="img/beatles_logo05.png" alt="" height="60px">
     </header>
     <main>
 
@@ -67,7 +66,7 @@ for ($i = 1; $i <= 31; $i++) {
             <!-- <p>e-mail <br>
                 <input type="email" name="email" placeholder="email" required>
             </p> -->
-            
+
             <!-- 選択しなくても行っちゃう -->
             <p>性別</p>
             <div class="gender">
@@ -91,7 +90,7 @@ for ($i = 1; $i <= 31; $i++) {
             <select name="month"><?= $month ?></select>
             <select name="day"><?= $day ?></select>
 
-            <p> <input type="submit" value="Sign Up!(登録する)"></p>
+            <p><input type="submit" value="Sign Up! (登録する)" class="gradient1"></p>
 
             <p>パスワードは半角英数文字をそれぞれ1文字以上含んだ、<br>8文字以上で設定してください。</p>
         </form>
