@@ -13,7 +13,7 @@
 <body>
     <header>
         <img src="./img/beatles_logo05.png" alt="aaaaaa">
-        <a href="login.php" class="gradient1">ログイン</a>
+        <a href="login.php" class="gradient1">login</a>
     </header>
     <main>
         <ul class="img_wrap">

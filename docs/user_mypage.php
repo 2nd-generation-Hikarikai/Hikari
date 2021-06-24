@@ -70,6 +70,7 @@ foreach ($result as $record) {
         <li>
         
         <form id='fm-{$record['playlist_id']}'>
+        <i class='fas fa-headphones fa-lg'></i>
         <li onclick='submitFnc({$record['playlist_id']})'>{$record["playlist_name"]}</li>
         <input type='hidden' name='playlist_id' value='{$record['playlist_id']}'>
         </form>
@@ -103,10 +104,9 @@ unset($record);
 
 <body>
     <header>
-        <a href="beatles.php" class="btn"><img src="img/beatles_logo05.png" alt="" height="60px"></a>
-        <h3>My Playlist</h3>
-        <a href="logout.php" class="btn">logout</a>
-        <a href="user_edit.php" class="btn">プロフィール編集</a>
+        <a href="beatles.php"><img src="img/beatles_logo05.png" alt="" height="60px"></a>
+        <h1>My Playlist</h1>
+        <a href="logout.php" class="gradient1">logout</a>
 
     </header>
     <main>
@@ -130,6 +130,7 @@ unset($record);
         <!-- </form> -->
 
     </main>
+    <script src="https://kit.fontawesome.com/b28496ef11.js" crossorigin="anonymous"></script>
     <script>
         function submitFnc(a) {
             const fm = document.getElementById(`fm-${a}`);
