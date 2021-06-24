@@ -5,6 +5,8 @@
 // サインアップ画面
 // プレイリスト--津曲さん
 // ローディング画面
+// liの背景変えてみる
+
 
 session_start();
 include("functions.php");
@@ -136,12 +138,12 @@ foreach ($musicAll as $key => $music) {
 
 
   </main>
-  <footer>
+  <!-- <footer>
     <div class="footer_container">
 
       a
     </div>
-  </footer>
+  </footer> -->
 
 
 
