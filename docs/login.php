@@ -24,7 +24,7 @@
 
             <div class="form_container">
                 <div>
-                    <h1>~~~~~にログイン</h1>
+                    <h1><span class="Hikarify">Hikarify</span>にログイン</h1>
                 </div>
                 <div class="input_styles">
                     <input type="text" onfocus="animation1()" onblur="animationout1()" id="input_name1" name="username" required>

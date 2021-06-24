@@ -49,12 +49,18 @@
             <li><img src="img/beatles06.jpeg" alt=""></li>
             <li><img src="img/beatles.jpg" alt=""></li>
             <li><img src="img/beatles_logo04.jpg" alt=""></li>
+            <li><img src="album_img/Help.jpg" alt=""></li>
+            <li><img src="img/beatles09.jpg" alt=""></li>
+            <li><img src="img/beatles02.jpg" alt=""></li>
+            <li><img src="album_img/AHardDaysNight.jpg" alt=""></li>
+            <li><img src="img/beatles13.jpg" alt=""></li>
+            <li><img src="album_img/YellowSubmarine.jpg" alt=""></li>
+            <li><img src="img/beatles08.jpg" alt=""></li>
+            <li><img src="img/beatles03.jpg" alt=""></li>
         </ul>
 
         <div class="main_wrap transparent">
-            <h1 class="transparent">Beatlesの曲が聴き放題</h1>
-
-            <h2 class="transparent">ああああああ</h2>
+            <h1 class="transparent ">Hello Hikarify !</h1>
 
             <!-- <form action="signup.php" method="post" autocomplete="off" class="transparent">
                 <div class="transparent">

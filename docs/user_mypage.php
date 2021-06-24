@@ -129,24 +129,6 @@ unset($record);
 
         <!-- </form> -->
 
-
-
-        <ul>
-            <li>
-                プレイリスト
-                <ul>
-                    <li>曲名１</li>
-                    <li>曲名２</li>
-                </ul>
-            </li>
-
-            <li>
-                プレイリスト２
-                <ul>
-                    <li>曲名３</li>
-                    <li>曲名４</li>
-                </ul>
-            </li>
     </main>
     <script>
         function submitFnc(a) {
