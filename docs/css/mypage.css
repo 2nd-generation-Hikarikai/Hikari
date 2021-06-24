@@ -1,23 +1,16 @@
-header {
-    display: flex;
-    position: fixed;
-    height: 60px;
-    width: 100%;
-    align-items: center;
-    padding: 10px;
-    justify-content: space-between;
-}
 
 ul{
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
 }
 li{
     list-style-type:none;
+    font-size: 20px;
+    padding: 0 10px;
 }
 
 h1{
-    font-size: 3.6rem;
+    font-size: 36px;
 }
 h2{
     font-size: 2.4rem;
@@ -27,17 +20,26 @@ p{
 }
 .music_wrap{
     display: flex;
-    margin-top: 20px;
+    margin: 20px auto;
 }
 .song_wrap{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px;
 }
 .img_wrap>img{
     display: block;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     object-fit: cover;
-    margin: 40px;
+    margin: 20px 10px;
+}
+form{
+    display: block;
+    margin: 60px auto;
+}
+
+.btn{
+    font-size: 24px;
 }
