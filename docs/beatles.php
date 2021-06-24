@@ -1,11 +1,11 @@
 <?php
 // ホバーアクションを遅らせる--ok--
-// 検索の勉強--森重さん
-// 音楽入れる
-// サインアップ画面
-// プレイリスト--津曲さん
+// 検索の勉強--森重さん--ok--
+// 音楽入れる--ok--
+// サインアップ画面--ok--
+// プレイリスト--津曲さん--ok--
 // ローディング画面
-// liの背景変えてみる
+// liの背景変えてみる--ok--
 
 
 session_start();
@@ -60,7 +60,7 @@ foreach ($musicAll as $key => $music) {
       </div>
     </div>
     <div class='music_title'>{$music['music_name']}</div>
-    <audio controls>
+    <audio controls id='audio'>
       <source src='./music/{$music['music_name']}.mp3'>
     </audio>
     <h3>Trivia</h3>
@@ -112,58 +112,58 @@ foreach ($musicAll as $key => $music) {
       <input type="text" id="search" size="25" placeholder="Search">
     </div> -->
 
-<!-- 感情検索表示 -->
-<p class="feel">How are you feeling now?</p>
+    <!-- 感情検索表示 -->
+    <p class="feel">How are you feeling now?</p>
 
 
-<form  method ='post'  action="ajax_get.php">
-    <select name="myselect" id="search" class="select">
-          <option value="楽しい">楽しい</option>
-          <option value="嬉しい">嬉しい</option>
-          <option value="悲しい">悲しい</option>
-          <option value="孤独を感じる">孤独を感じる</option>
-          <option value="どうでもいい">どうでもいい</option>
-          <option value="虚しい">虚しい</option>
-          <option value="切ない">切ない</option>
-          <option value="人恋しい">人恋しい</option>
-          <option value="助けて欲しい">助けて欲しい</option>
-          <option value="眠りたい">眠りたい</option>
-          <option value="もの悲しい気分">もの悲しい気分</option>
-          <option value="衝撃を味わいたい">衝撃を味わいたい</option>
-          <option value="愛が欲しい">愛が欲しい</option>
-          <option value="刺激が欲しい">刺激が欲しい</option>
-          <option value="リラックスしたい">リラックスしたい</option>
-          <option value="ほんわかしたい">ほんわかしたい</option>
-          <option value="泣きたい">泣きたい</option>
-          <option value="腹が立つ">腹がたつ</option>
-          <option value="勇気づけられたい">勇気づけられたい</option>
-          <option value="誕生日を祝いたい">誕生日を祝いたい・祝って欲しい</option>
-          <option value="癒されたい">癒されたい</option>
-    </select>
-  
-  <!-- <button type="submit" name="name" onclick="location.href='./ajax_get.php'" value="値">送信</button> -->
-  <input type="submit" onclick="location.href='ajax_get.php'" value="送信"name="name" class="input" >
-  
-</form>
+    <form method='post' action="ajax_get.php">
+      <select name="myselect" id="search" class="select">
+        <option value="楽しい">楽しい</option>
+        <option value="嬉しい">嬉しい</option>
+        <option value="悲しい">悲しい</option>
+        <option value="孤独を感じる">孤独を感じる</option>
+        <option value="どうでもいい">どうでもいい</option>
+        <option value="虚しい">虚しい</option>
+        <option value="切ない">切ない</option>
+        <option value="人恋しい">人恋しい</option>
+        <option value="助けて欲しい">助けて欲しい</option>
+        <option value="眠りたい">眠りたい</option>
+        <option value="もの悲しい気分">もの悲しい気分</option>
+        <option value="衝撃を味わいたい">衝撃を味わいたい</option>
+        <option value="愛が欲しい">愛が欲しい</option>
+        <option value="刺激が欲しい">刺激が欲しい</option>
+        <option value="リラックスしたい">リラックスしたい</option>
+        <option value="ほんわかしたい">ほんわかしたい</option>
+        <option value="泣きたい">泣きたい</option>
+        <option value="腹が立つ">腹がたつ</option>
+        <option value="勇気づけられたい">勇気づけられたい</option>
+        <option value="誕生日を祝いたい">誕生日を祝いたい・祝って欲しい</option>
+        <option value="癒されたい">癒されたい</option>
+      </select>
 
-<!-- 
+      <!-- <button type="submit" name="name" onclick="location.href='./ajax_get.php'" value="値">送信</button> -->
+      <input type="submit" onclick="location.href='ajax_get.php'" value="送信" name="name" class="input">
+
+    </form>
+
+    <!-- 
 <audio controls src="music/2-12 Let It Be.mp3"></audio>
 
 <audio controls>
       <source src='./music/2-12 Let It Be.mp3'>
     </audio> -->
 
-<div id ="results"></div>
+    <div id="results"></div>
 
-<!-- 感情検索表示終わり -->
+    <!-- 感情検索表示終わり -->
   </header>
   <main>
     <div class="top_container">
-    <img src="./img/get.back.jpg" alt="" width="900px" > 
+      <img src="./img/get.back.jpg" alt="" width="900px">
       <!-- メイン画面のデザイン -->
       <p id="title">映画『ゲット・バック』が2021年11月25日に世界同時劇場公開！<br>
-      42分間の「ルーフトップ・コンサート」を含む60時間の未発表映像、 <br>
-      150時間の未発表音源を再編集</p>
+        42分間の「ルーフトップ・コンサート」を含む60時間の未発表映像、 <br>
+        150時間の未発表音源を再編集</p>
     </div>
     <div class="main_container">
 
@@ -187,7 +187,7 @@ foreach ($musicAll as $key => $music) {
         <?= $output ?>
       </ul>
     </div>
-<div id="mask"></div>
+    <div id="mask"></div>
 
 
   </main>
@@ -211,8 +211,6 @@ foreach ($musicAll as $key => $music) {
 
 
   <script>
-
-
     const array_30 = [];
     for (let i = 0; i < 30; ++i) {
       array_30.push(document.getElementById("like-" + i));
@@ -221,30 +219,30 @@ foreach ($musicAll as $key => $music) {
     }
     let playlist_ul;
     const mask = document.getElementById('mask');
-    mask.addEventListener('click',() => {
+    mask.addEventListener('click', () => {
       mask.classList.remove('mask');
       playlist_ul.classList.add('none');
     });
 
     function getId(ele) {
-        let id_value = ele.id; // eleのプロパティとしてidを取得
-        const w = id_value.split('-');
-        // console.log(w);
-        const id_key = w[1];
-        const key__ = parseInt(id_key);
-        // console.log(key__);
-        console.log(array_30[key__]);
+      let id_value = ele.id; // eleのプロパティとしてidを取得
+      const w = id_value.split('-');
+      // console.log(w);
+      const id_key = w[1];
+      const key__ = parseInt(id_key);
+      // console.log(key__);
+      console.log(array_30[key__]);
 
       const id_name = "playlist_ul-" + key__;
-       playlist_ul = document.getElementById(id_name);
+      playlist_ul = document.getElementById(id_name);
 
       playlist_ul.classList.remove('none');
       mask.classList.add('mask');
     }
 
-  
 
-    function submitFnc(a,b) {
+
+    function submitFnc(a, b) {
       let fm = document.getElementById(`fm-${a}`);
       // alert(fm);
       // console.log(fm);
@@ -270,6 +268,51 @@ foreach ($musicAll as $key => $music) {
       fm.submit();
     }
 
+
+    // 音楽を重複再生できないようにする
+    const audio = document.getElementById('audio');
+    var audios = document.querySelectorAll("audio");
+    for (var i = 0; i < audios.length; i++) {
+      audios[i].addEventListener("play", function() {
+        for (var j = 0; j < audios.length; j++) {
+          if (audios[j] != this) {
+            audios[j].pause()
+          }
+        }
+      }, false);
+    }
+    // audio.addEventListener('click', () => {
+    //     if (audio.play()) {
+    //       pauseVideo();
+    //     }
+    // });
+
+
+    // function pauseVideo() {
+    //   //動画を一時停止
+    //   audio.pause();
+    // }
+
+    //     (function(){
+    //     let playingAudio = null;
+    //     let audioList = document.querySelectorAll("audio");
+
+    //     let playAudioHandler = function playingAudioHandler(event){
+    //         if(playingAudio && playingAudio !== event.target){
+    //             playingAudio.pause();
+    //             // 停止時に位置を最初にする場合は下↓のコメントを外す
+    //             // playingAudio.currentTime = 0;
+    //         }
+    //         playingAudio = event.target;
+    //     }
+
+    //     for(let i = 0, l = audioList.length; i < l; i++){
+    //         audioList[i].addEventListener("play", playAudioHandler);
+    //     }
+    // })();
+
+
+
     // function postDB() {
 
     // }
@@ -282,7 +325,7 @@ foreach ($musicAll as $key => $music) {
     //   return key;
     // }
     // aaa();
-    
+
     // const like = document.getElementById('like');
     // const playlist_ul = document.getElementById('playlist_ul0');
     // like.addEventListener('click',() => {
