@@ -144,8 +144,8 @@ color: black;
   position: absolute;
   width: 100%;
   text-align: left;
-  top: 30px;
-  left: 25px;
+  top: 84px;
+  left: 71px;
   font-size: 23px;
   padding-top: 30px;
   color: rgb(15, 15, 14);
@@ -285,7 +285,7 @@ margin: 5px;
   margin: 0;
   position: absolute;
   top: 0;
-  left: 100px;
+  left: 82px;
   /* text-align: left; */
   z-index: 10;
 }

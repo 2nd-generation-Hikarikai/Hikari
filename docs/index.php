@@ -76,6 +76,11 @@
         </div>
 
     </main>
+    <script>
+        setTimeout(function() {
+            window.location.href = 'https://localhost/myfile_lab05/Hikari/docs/signup.php';
+        }, 4000);
+    </script>
 </body>
 
 </html>
