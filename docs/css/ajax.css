@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&family=RocknRoll+One&family=Rokkitt:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    /* font-size: 62.5%; */
+    background-color: black;
+    color: white;
+    font-family: 'Rokkitt', 'Noto Sans JP', sans-serif;
+}
+body{
+    width: 100%;
+    display: block;
+    text-align:center;
+    font-size: 18px;
+    margin: 0 auto;
+}
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    padding: 10px 50px;
+    justify-content: space-between;
+}
+header>img{
+    height: 80px;
+}
+main{
+    display: block;
+    padding-top: 80px;
+}
+
+li{
+    list-style-type:none;
+    font-size: 20px;
+    padding-bottom: 100px;
+}
+.btn{
+    display: inline-block;
+    margin: 10px auto;
+    color: white;
+    border: white 2px;
+    border-radius: 30px;
+}
+.title_img>img{
+    display: block;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    margin: 100px auto 20px;
+
+}
+
+/*== グラデーションが流れる */
+
+.gradient1{
+    /*ボタンの形状*/
+    display: inline-block;
+    color:#fff;
+    padding: 10px 30px;
+    
+    border-radius:30px;
+    text-decoration: none;
+    outline: none;
+    /*背景の色と形状*/
+    background: linear-gradient(270deg,  #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
+    background-position: 1% 50%;
+    background-size: 200% auto;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease-out;
+}
+
+/*hoverした際の、背景の場所とテキスト色の変更*/
+.gradient1:hover {
+    color: #fff;
+    background-position: 99% 50%;
+}
