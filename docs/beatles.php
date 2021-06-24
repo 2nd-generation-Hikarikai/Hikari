@@ -118,20 +118,26 @@ foreach ($musicAll as $key => $music) {
 
 <form  method ='post'  action="ajax_get.php">
     <select name="myselect" id="search" class="select">
+          <option value="元気を出したい">元気を出したい</option>
+          <option value="気合をいれたい">気合をいれたい</option>
           <option value="楽しい">楽しい</option>
           <option value="嬉しい">嬉しい</option>
           <option value="悲しい">悲しい</option>
           <option value="孤独を感じる">孤独を感じる</option>
-          <option value="どうでもいい">どうでもいい</option>
+          <option value="投げやりな気分。">投げやりな気分。</option>
+          <option value="現実世界を離れたい…">現実世界を離れたい…</option>
           <option value="虚しい">虚しい</option>
           <option value="切ない">切ない</option>
+          <option value="辛い">辛い</option>
           <option value="人恋しい">人恋しい</option>
-          <option value="助けて欲しい">助けて欲しい</option>
-          <option value="眠りたい">眠りたい</option>
-          <option value="もの悲しい気分">もの悲しい気分</option>
+          <option value="誰かに助けてほしい">誰かに助けてほしい</option>
+          <option value="眠たい">眠たい</option>
+          <option value="物悲しい気分に浸りたい">物悲しい気分に浸りたい</option>
+          <option value="旅に出たい。">旅に出たい。</option>
           <option value="衝撃を味わいたい">衝撃を味わいたい</option>
           <option value="愛が欲しい">愛が欲しい</option>
           <option value="刺激が欲しい">刺激が欲しい</option>
+          <option value="昔を思い返したい">昔を思い返したい</option>
           <option value="リラックスしたい">リラックスしたい</option>
           <option value="ほんわかしたい">ほんわかしたい</option>
           <option value="泣きたい">泣きたい</option>
@@ -145,13 +151,13 @@ foreach ($musicAll as $key => $music) {
   <input type="submit" onclick="location.href='ajax_get.php'" value="送信"name="name" class="input" >
   
 </form>
-
+<!-- 
 <!-- 
 <audio controls src="music/2-12 Let It Be.mp3"></audio>
 
 <audio controls>
       <source src='./music/2-12 Let It Be.mp3'>
-    </audio> -->
+    </audio> --> 
 
 <div id ="results"></div>
 
