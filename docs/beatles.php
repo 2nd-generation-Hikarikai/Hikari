@@ -20,6 +20,10 @@ $pdo = connect_to_db();
 $stmt = $pdo->prepare('SELECT * FROM playlists_table WHERE user_id=?');
 $stmt->execute([$_SESSION['user_id']]);
 $my_playlist = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// var_dump($my_playlist);
+// exit();
+
 // var_dump($my_playlist);
 // exit('ok');
 // $push = "";
@@ -44,6 +48,8 @@ $musicAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $output = '';
 foreach ($musicAll as $key => $music) {
+  // var_dump($music['music_id']);
+  // exit();
   $output .= "
   <li class='relative'>
   <div id='absolute' class='absolute' ontouchstart>
@@ -55,7 +61,7 @@ foreach ($musicAll as $key => $music) {
     </div>
     <div class='music_title'>{$music['music_name']}</div>
     <audio controls>
-      <source src='./music/Here,There_And_Everywhere.mp3'>
+      <source src='./music/{$music['music_name']}.mp3'>
     </audio>
     <h3>Trivia</h3>
     <div class='trivia'>{$music['Trivia1']}</div>
@@ -66,10 +72,10 @@ foreach ($musicAll as $key => $music) {
   ";
   foreach ($my_playlist as $list) {
     $output .= "
-    <form id='fm'>
-    <li class='playlist_li' onclick='submitFnc()'>{$list['playlist_name']}</li>
-      <input type='hidden' name='playlist_id' value='{$list['playlist_id']}'>
-      <input type='hidden' name='music_id' value='{$music['music_id']}'>
+    <form id='fm-{$list['playlist_id']}'>
+    <li class='playlist_li' onclick='submitFnc({$list['playlist_id']}, {$music['music_id']})'>{$list['playlist_name']}</li>
+      <input type='hidden' name='playlist_id'>
+      <input type='hidden' name='music_id'>
     </form>
     ";
   }
@@ -194,14 +200,19 @@ foreach ($musicAll as $key => $music) {
       mask.classList.add('mask');
     }
 
-    let fm = document.getElementById("fm");
+  
 
-    function submitFnc() {
+    function submitFnc(a,b) {
+      let fm = document.getElementById(`fm-${a}`);
+      // alert(fm);
+      // console.log(fm);
+      // console.log()
       //formオブジェクトを取得する
 
       //Submit値を操作したい場合はこんな感じでできます。
       // 例）name="hid1"の値を"hoge"にする
-      // fm.hid1.value = "hoge";
+      fm.music_id.value = b;
+      fm.playlist_id.value = a;
 
       //Submit形式指定する（post/get）
       fm.method = "post"; // 例）POSTに指定する
