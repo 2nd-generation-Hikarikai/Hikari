@@ -61,7 +61,7 @@ foreach ($musicAll as $key => $music) {
     </div>
     <div class='music_title'>{$music['music_name']}</div>
     <audio controls>
-      <source src='./music/Here,There_And_Everywhere.mp3'>
+      <source src='./music/{$music['music_name']}.mp3'>
     </audio>
     <h3>Trivia</h3>
     <div class='trivia'>{$music['Trivia1']}</div>
@@ -74,8 +74,8 @@ foreach ($musicAll as $key => $music) {
     $output .= "
     <form id='fm-{$list['playlist_id']}'>
     <li class='playlist_li' onclick='submitFnc({$list['playlist_id']}, {$music['music_id']})'>{$list['playlist_name']}</li>
-      <input  type='hidden' name='playlist_id'>
-      <input  type='hidden' name='music_id'>
+      <input type='hidden' name='playlist_id'>
+      <input type='hidden' name='music_id'>
     </form>
     ";
   }
