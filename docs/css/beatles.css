@@ -129,7 +129,7 @@ header {
 .top_contaner {
   background: gray;
   width: 100%;
-  height: 700px;
+  height: 400px;
   margin-top: 80px;
   overflow: hidden;
   position: relative;
@@ -148,6 +148,8 @@ color: black;
   left: 25px;
   font-size: 23px;
   padding-top: 30px;
+  color: rgb(15, 15, 14);
+	text-shadow: rgb(240, 240, 227) 1px 0 10px;
 
 }
 /* ---メイン画面のデザイン--- */
@@ -332,7 +334,7 @@ white-space: nowrap;
 
 /* フッター */
 .footer_container {
-  background: gray;
-  height: 400px;
+  background: rgb(10, 10, 10);
+  height: 200px;
   width: 100%; 
 }

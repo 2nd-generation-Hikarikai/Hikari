@@ -153,10 +153,7 @@ foreach ($musicAll as $key => $music) {
 </form>
 
 
-<audio controls src="music/2-12 Let It Be.mp3"></audio>
-<audio controls>
-      <source src='./music/2-12 Let It Be.mp3'>
-    </audio> --> 
+
 
     <div id="results"></div>
 
@@ -196,11 +193,11 @@ foreach ($musicAll as $key => $music) {
 
 
   </main>
-  <!-- <footer>
+  <footer>
     <div class="footer_container">
       
     </div>
-  </footer> -->
+  </footer>
 
 
 
