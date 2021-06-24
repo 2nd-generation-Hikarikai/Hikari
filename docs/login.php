@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -40,7 +38,7 @@
 
                 <div class="space_24"></div>
 
-                <button class="gradient1">ログイン</button>
+                <button class="gradient1">login</button>
 
                 <div class="space_24"></div>
 

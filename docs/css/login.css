@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
   /* background-color: black; */
   color: white;
   font-family: "Rokkitt", "Noto Sans JP", sans-serif;
@@ -160,7 +160,6 @@ input {
   display: inline-block;
   color: #fff;
   padding: 10px 30px;
-
   border-radius: 30px;
   text-decoration: none;
   outline: none;
