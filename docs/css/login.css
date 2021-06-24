@@ -74,8 +74,7 @@ h1{
 
 
 .input_styles {
-  background: gray;
-  width: 400px;
+  height: 60px;
   margin: auto;
   position: relative;
   border-radius: 5px;
@@ -85,7 +84,7 @@ input {
   height: 55px;
   width: 400px;
   line-height: 0.4em;
-  font-size: 4em;
+  font-size: 0.9em;
   padding: 25px 0 0 5px;
   border: 1px solid #eff3bd;
   border-radius: 5px;
@@ -96,7 +95,7 @@ input {
 .placeholder1 {
   position: absolute;
   top: 5px;
-  left: 110px;
+  left: 100px;
   font-size: 18px;
   pointer-events: none;
   color: white;
@@ -159,6 +158,7 @@ input {
   /*ボタンの形状*/
   display: inline-block;
   color: #fff;
+  width: 150px;
   padding: 10px 30px;
   border-radius: 30px;
   text-decoration: none;

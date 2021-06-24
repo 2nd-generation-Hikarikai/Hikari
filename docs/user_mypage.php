@@ -2,7 +2,8 @@
 session_start();
 //関数用のファイルを読み込む
 include('functions.php');
-check_session_id();
+// check_session_id();
+// var_dump($_SESSION['EMAIL']);
 
 //DB接続
 $pdo = connect_to_db();
@@ -135,6 +136,9 @@ unset($record);
         function submitFnc(a) {
             const fm = document.getElementById(`fm-${a}`);
             //formオブジェクトを取得する
+            // areat(b);
+
+            // $_SESSION['playlist_name'] = b;
 
             //Submit値を操作したい場合はこんな感じでできます。
             // 例）name="hid1"の値を"hoge"にする

@@ -1,4 +1,17 @@
 <?php
+include("functions.php");
+session_start();
+$pdo = connect_to_db();
+
+if (isset($_SESSION['EMAIL'])) {
+    header('Location: //localhost/myfile_lab05/Hikari/docs/login.php');
+    exit;
+  } else {
+    echo '';
+  }
+
+
+
 for ($i = 1920; $i <= 2020; $i++) {
     $year .= '<option value="' . $i . '">' . $i . '年</option>';
 }
@@ -20,7 +33,7 @@ for ($i = 1; $i <= 31; $i++) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ユーザー登録画面</title>
     <link href="css/signup.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
 
 </head>
 
@@ -69,9 +82,12 @@ for ($i = 1; $i <= 31; $i++) {
 
             <!-- 選択しなくても行っちゃう -->
             <p>性別</p>
+
             <div class="gender">
                 <div><label>男性<input type="radio" name="sex" value="1" style="transform:scale(1.5);"></label></div>
+
                 <div><label>女性<input type="radio" name="sex" value="0" style="transform:scale(1.5);"></label></div>
+
                 <div><label>その他<input type="radio" name="sex" value="2" style="transform:scale(1.5);"></label></div>
             </div>
 

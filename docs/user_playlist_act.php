@@ -87,6 +87,7 @@ foreach ($result as $record2) {
 
 
         <form action="user_playlist_act.php" method="POST" class="play_music">
+            <h3><?= $_SESSION['playlist_name']  ?> </h3>
             <ul>
                 <!-- ここに<li>でphpデータが入る -->
                 <?= $songs ?>

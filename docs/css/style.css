@@ -75,3 +75,6 @@ input{
     color: #fff;
     background-position: 99% 50%;
 }
+.fas {
+    cursor: pointer;
+}
