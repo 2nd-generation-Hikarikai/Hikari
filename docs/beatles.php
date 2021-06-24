@@ -5,6 +5,8 @@
 // サインアップ画面
 // プレイリスト--津曲さん
 // ローディング画面
+// liの背景変えてみる
+
 
 session_start();
 include("functions.php");
@@ -28,11 +30,10 @@ $my_playlist = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //   <input type='hidden' value='{$music['music_id']}'>
 //   ";
 // }
-
 // ---プレイリストへ追加---end---
 
-// ---おんがぐ一覧表示---
 
+// ---おんがぐ一覧表示---
 $stmt = $pdo->prepare('SELECT * FROM music_table');
 $stmt->execute();
 $musicAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -61,7 +62,7 @@ foreach ($musicAll as $key => $music) {
     <div class='trivia'>{$music['Trivia2']}</div>
     <div class='trivia'>{$music['Trivia3']}</div>
   </div>
-  <ul class='playlist_ul none' id='playlist_ul-{$key}' onclick='getId(this)';>
+  <ul class='playlist_ul none' id='playlist_ul-{$key}' onclick='getId(this)'>
   ";
   foreach ($my_playlist as $list) {
     $output .= "
@@ -137,12 +138,12 @@ foreach ($musicAll as $key => $music) {
 
 
   </main>
-  <footer>
+  <!-- <footer>
     <div class="footer_container">
 
       a
     </div>
-  </footer>
+  </footer> -->
 
 
 
@@ -214,12 +215,6 @@ foreach ($musicAll as $key => $music) {
 
     // }
 
-
-
-
-    
-
-
     // console.log(likeID);
 
     // function aaa() {
@@ -229,13 +224,6 @@ foreach ($musicAll as $key => $music) {
     // }
     // aaa();
     
-
-
-
-
-
-
-
     // const like = document.getElementById('like');
     // const playlist_ul = document.getElementById('playlist_ul0');
     // like.addEventListener('click',() => {
