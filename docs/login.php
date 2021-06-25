@@ -1,20 +1,13 @@
-<?php 
+<?php
 session_start();
 include('functions.php');
 $pdo = connect_to_db();
 
 if (isset($_SESSION['EMAIL'])) {
-    header('Location: //localhost/myfile_lab05/Hikari/docs/beatles.php');
+    header('Location:beatles.php');
     exit;
-  }
-
-
-
+}
 ?>
-
-$_SESSION["session_id"] = session_id();
-        $_SESSION["user_id"] = $val["user_id"];
-        $_SESSION["username"] = $val["username"];
 <!DOCTYPE html>
 <html lang="ja">
 

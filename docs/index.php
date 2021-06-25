@@ -78,9 +78,9 @@
     </main>
     <script>
         // 発表ちゅうは見せたいから自動ページ遷移はなし
-        // setTimeout(function() {
-        //     window.location.href = 'https://localhost/myfile_lab05/Hikari/docs/signup.php';
-        // }, 4000);
+        setTimeout(function() {
+            window.location.href = 'login.php';
+        }, 4000);
     </script>
 </body>
 

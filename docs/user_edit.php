@@ -7,7 +7,7 @@
 session_start();
 //関数用のファイルを読み込む
 include('functions.php');
-check_session_id();
+
 
 // 送信されたidをgetで受け取る
 $id = $_GET['id'];
