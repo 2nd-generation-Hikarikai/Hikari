@@ -15,13 +15,16 @@ h1{
 }
 h2{
     font-size: 2.4rem;
+    margin: 10px;
+
 }
 p{
     font-size: 1.8rem;
 }
 .music_wrap{
-    display: flex;
+    /* display: flex; */
     margin: 20px auto;
+    text-align: center;
 }
 .song_wrap{
     display: flex;
@@ -31,10 +34,10 @@ p{
 }
 .img_wrap>img{
     display: block;
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
     object-fit: cover;
-    margin: 20px 10px;
+    margin: 60px auto 5px;
 }
 form{
     display: block;
