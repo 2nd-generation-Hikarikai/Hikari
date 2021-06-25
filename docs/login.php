@@ -7,14 +7,7 @@ if (isset($_SESSION['EMAIL'])) {
     header('Location:beatles.php');
     exit;
 }
-
-
-
 ?>
-
-<!-- $_SESSION["session_id"] = session_id();
-        $_SESSION["user_id"] = $val["user_id"];
-        $_SESSION["username"] = $val["username"]; -->
 <!DOCTYPE html>
 <html lang="ja">
 
