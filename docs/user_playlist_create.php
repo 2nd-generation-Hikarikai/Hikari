@@ -5,7 +5,7 @@
 
 session_start();
 include("functions.php");
-check_session_id();
+// check_session_id();
 
 //入力チェック 未入力はエラー 必ず挙動確認すること
 if (
