@@ -79,7 +79,7 @@
     <script>
         // 発表ちゅうは見せたいから自動ページ遷移はなし
         setTimeout(function() {
-            window.location.href = 'signup.php';
+            window.location.href = 'login.php';
         }, 4000);
     </script>
 </body>

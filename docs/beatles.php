@@ -78,19 +78,18 @@ foreach ($musicAll as $key => $music) {
 <body>
   <!-- ヘッダーをレスポンシブにしたい -->
   <header class="header_text">
-    <h3>beatles</h3>
-    <a href="logout.php" class="btn">logout</a>
-    <a href="user_mypage.php" class="btn">playlist</a>
-    <!-- <a href="user_mypage.php" class="btn">My Profile</a> -->
-    <!-- <div class="searchform">
-      <input type="text" id="search" size="25" placeholder="Search">
-    </div> -->
 
-<!-- 感情検索表示 -->
-<p class="feel">How are you feeling now?</p>
+    <div class="header1">
+      <h3>beatles</h3>
+      <a href="logout.php" class="btn">logout</a>
+      <a href="user_mypage.php" class="btn">playlist</a>
+    </div>
 
-<form  method ='post'  action="ajax_get.php">
-    <select name="myselect" id="search" class="select">
+    <!-- 感情検索表示 -->
+    <div class="header2">
+      <p class="feel">How are you feeling now?</p>
+      <form method='post' action="ajax_get.php">
+        <select name="myselect" id="search" class="select">
           <option value="元気を出したい">元気を出したい</option>
           <option value="気合をいれたい">気合をいれたい</option>
           <option value="楽しい">楽しい</option>
@@ -118,13 +117,11 @@ foreach ($musicAll as $key => $music) {
           <option value="勇気づけられたい">勇気づけられたい</option>
           <option value="誕生日を祝いたい">誕生日を祝いたい・祝って欲しい</option>
           <option value="癒されたい">癒されたい</option>
-    </select>
-  
-  <!-- <button type="submit" name="name" onclick="location.href='./ajax_get.php'" value="値">送信</button> -->
-  <input type="submit" onclick="location.href='ajax_get.php'" value="送信"name="name" class="input" >
-  
-</form>
-    <div id="results"></div>
+        </select>
+        <!-- <button type="submit" name="name" onclick="location.href='./ajax_get.php'" value="値">送信</button> -->
+        <input type="submit" onclick="location.href='ajax_get.php'" value="送信" name="name" class="input">
+      </form>
+    </div>
 
     <!-- 感情検索表示終わり -->
   </header>
@@ -148,7 +145,7 @@ foreach ($musicAll as $key => $music) {
   </main>
   <footer>
     <div class="footer_container">
-      
+
     </div>
   </footer>
 

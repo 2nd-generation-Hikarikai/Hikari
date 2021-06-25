@@ -94,14 +94,25 @@ header {
   background: black;
 }
 
+.header1 {
+  display: flex;
+  align-items: center;
+  
+}
+.header1>h3 {
+  padding: 15px;
+}
+
+.header1>h3 a {
+  padding: 20px;
+}
+
 .header_text a{
   font-size: 25px;
-
 }
 
 .header_text h3{
   font-size: 30px;
-
 }
 
 .input{
