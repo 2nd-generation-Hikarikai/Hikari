@@ -18,8 +18,8 @@ if ( // 入力チェック(未入力の場合は弾く，commentのみ任意)
 $playlist_id = $_POST['playlist_id'];
 $music_id = $_POST['music_id'];
 
-// var_dump($playlist_id);
-// var_dump($music_id);
+var_dump($playlist_id);
+var_dump($music_id);
 
   // SQL作成&実行
   $sql = "INSERT INTO playlist_create_table(create_id, playlist_id, music_id, created_at) VALUES(NULL, :playlist_id, :music_id, sysdate())";
@@ -28,7 +28,6 @@ $music_id = $_POST['music_id'];
   $stmt->bindValue(':playlist_id', $playlist_id, PDO::PARAM_INT);
   $stmt->bindValue(':music_id', $music_id, PDO::PARAM_INT);
   $status = $stmt->execute(); // SQLを実行
-  // exit('');
   // exit('ok');
 
   if ($status == false) {

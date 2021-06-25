@@ -7,7 +7,7 @@ include('functions.php');
 $pdo = connect_to_db();
 
 if (isset($_SESSION['EMAIL'])) {
-    header('Location: //localhost/myfile_lab05/Hikari/docs/beatles.php');
+    header('Location: beatles.php');
     exit;
   } else {
     echo '';

@@ -4,14 +4,11 @@ session_start();
 $pdo = connect_to_db();
 
 if (isset($_SESSION['EMAIL'])) {
-    header('Location: //localhost/myfile_lab05/Hikari/docs/login.php');
+    header('Location:login.php');
     exit;
   } else {
     echo '';
   }
-
-
-
 for ($i = 1920; $i <= 2020; $i++) {
     $year .= '<option value="' . $i . '">' . $i . '年</option>';
 }
@@ -24,10 +21,8 @@ for ($i = 1; $i <= 31; $i++) {
     $day .= '<option value="' . $i . '">' . $i . '日</option>';
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,11 +42,6 @@ for ($i = 1; $i <= 31; $i++) {
 
         <form method="POST" action="signup_act.php" autocomplete="off">
 
-            <!-- <p>name <br>
-                <input type="text" name="username" autocomplete="off" minlength="4" maxlength="10" size="10" placeholder="user_name" required>
-            </p> -->
-
-
             <div class="input_styles">
                 <input type="text" onfocus="animation1()" onblur="animationout1()" id="input_name1" name="username" required>
                 <div id="anime1" class="placeholder1">名前を入力してください</div>
@@ -63,23 +53,18 @@ for ($i = 1; $i <= 31; $i++) {
                 <input type="password" minlength="4" onfocus="animation2()" onblur="animationout2()" id="input_name2" name="password" required>
                 <div id="anime2" class="placeholder2">パスワードを入力してください</div>
             </div>
-
-
             <!-- <p>パスワード<br>
                 <input type="password" name="password" minlength="4" required>
             </p> -->
-
             <div class="space_24"></div>
 
             <div class="input_styles">
                 <input type="email" onfocus="animation3()" onblur="animationout3()" id="input_name3" name="email" required>
                 <div id="anime3" class="placeholder3">メールアドレスを入力してください</div>
             </div>
-
             <!-- <p>e-mail <br>
                 <input type="email" name="email" placeholder="email" required>
             </p> -->
-
             <!-- 選択しなくても行っちゃう -->
             <p>性別</p>
 
@@ -97,9 +82,6 @@ for ($i = 1; $i <= 31; $i++) {
                 <option value="0">女性</option>
                 <option value="2">限定しない</option>
             </select>
-
-            <!-- <p>パスワード<br>
-        <input type="password" name="password" value=""></p> -->
 
             <p>誕生日</p>
             <select name="year"><?= $year ?></select>
@@ -180,40 +162,8 @@ for ($i = 1; $i <= 31; $i++) {
     const input_name2 = document.getElementById('input_name2');
     input_name1.addEventListener('input', inputChange);
     input_name2.addEventListener('input', inputChange);
-    // ________
+
 </script>
 
 </html>
 
-<!-- 
-// <form action="signup_act.php" method="POST" autocomplete="off">
-//             <h3>初めての方はこちら</h3>
-//             <div>
-//                 name <input type="text" name="username" placeholder="name">
-//             </div>
-//             <div>
-//                 email <input type="text" name="email" placeholder="email">
-//             </div>
-//             <div>
-//                 性別
-//                 <label>
-//                     男性
-//                     <input type="radio" name="sex" value="">
-//                 </label>
-//                 <label>
-//                     女性
-//                     <input type="radio" name="sex" value="">
-//                 </label>
-//                 <label>
-//                     その他
-//                     <input type="radio" name="sex" value="">
-//                 </label>
-//             </div>
-//             <div>
-//                 password <input type="password" name="password">
-//             </div>
-
-//             <div>
-//                 <button class="gradient1">登録する</button>
-//             </div>
-//         </form> -->
