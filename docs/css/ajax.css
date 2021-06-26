@@ -24,9 +24,16 @@ header {
     padding: 10px 50px;
     justify-content: space-between;
 }
+
 header>img{
     height: 80px;
 }
+
+.color {
+    color: green;
+}
+
+
 main{
     display: block;
     padding-top: 80px;

@@ -37,8 +37,6 @@ if ($status == false) {
         <div id='absolute' class='absolute' ontouchstart>
         <div class='col-2 title_img'>
             <img src='./album_img/{$music['music_img']}'>
-
-            <span class='fas fa-heart color'></span>
             </div>
             </div>
             <div class='music_title'>{$music['music_name']}</div>
