@@ -10,6 +10,7 @@ session_start();
 include('functions.php');
 //値を受け取る
 $playlist_id = $_GET['playlist_id'];
+$playlist_name = $_GET['playlist_name'];
 // var_dump($playlist_id);
 // exit();
 
@@ -21,12 +22,9 @@ $pdo = connect_to_db();
 $sql = 'SELECT * FROM music_table INNER JOIN playlist_create_table ON music_table.music_id = playlist_create_table.music_id WHERE playlist_id=:playlist_id';
 
 $stmt = $pdo->prepare($sql);
-
 $stmt->bindValue(':playlist_id', $playlist_id, PDO::PARAM_INT);
-
 $status = $stmt->execute(); // SQLを実行 $statusに実行結果(取得したデータではない！)
 // var_dump($status);
-// exit;
 // exit('ok');
 
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);  //fetchAllで全部とれる
@@ -70,12 +68,12 @@ foreach ($result as $record2) {
     </header>
     <main>
 
-        <form action="user_playlist_act.php" method="POST" class="play_music">
-            <ul>
-                <!-- ここに<li>でphpデータが入る -->
-                <?= $songs ?>
-            </ul>
-        </form>
+        <h1><?= $playlist_name ?></h1>
+        <ul>
+            <!-- ここに<li>でphpデータが入る -->
+            <?= $songs ?>
+        </ul>
+
     </main>
     <script src="https://kit.fontawesome.com/b28496ef11.js" crossorigin="anonymous"></script>
 </body>

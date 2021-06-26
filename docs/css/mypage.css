@@ -47,3 +47,11 @@ form{
 .btn{
     font-size: 24px;
 }
+
+
+main h1 {
+    background: gray;
+    color: white;
+    text-align: center;
+    z-index: 5;
+}
