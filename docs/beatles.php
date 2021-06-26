@@ -81,8 +81,8 @@ foreach ($musicAll as $key => $music) {
 
     <div class="header1">
       <h3>beatles</h3>
-      <a href="logout.php" class="btn">logout</a>
-      <a href="user_mypage.php" class="btn">playlist</a>
+      <a href="logout.php">logout</a>
+      <a href="user_mypage.php">playlist</a>
     </div>
 
     <!-- 感情検索表示 -->
