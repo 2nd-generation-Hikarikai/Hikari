@@ -97,38 +97,36 @@ header {
 .header1 {
   display: flex;
   align-items: center;
-  
 }
 
 .header1 a {
-padding: 0 20px;
+  padding: 0 20px;
 }
 
-.header1>h3 {
-  padding:  0 15px;
+.header1 > h3 {
+  padding: 0 15px;
   margin-right: 40px;
 }
 
-.header1>h3 a {
+.header1 > h3 a {
   padding: 20px;
 }
 
-.header_text a{
+.header_text a {
   font-size: 25px;
 }
 
-.header_text h3{
+.header_text h3 {
   font-size: 30px;
 }
-
 
 .header2 {
   display: flex;
 }
 
 .header2 p {
-font-size: 25px;
-padding-right: 20px;
+  font-size: 25px;
+  padding-right: 20px;
 }
 
 .header2 form {
@@ -136,10 +134,10 @@ padding-right: 20px;
   padding-right: 20px;
 }
 
-.input{
+.input {
   background: black;
 }
-.select{
+.select {
   color: black;
   height: 25px;
   vertical-align: middle;
@@ -166,10 +164,10 @@ padding-right: 20px;
   overflow: hidden;
   position: relative;
 }
-.top_container img{
-width: 100%;
-object-fit: cover;
-color: black;
+.top_container img {
+  width: 100%;
+  object-fit: cover;
+  color: black;
 }
 
 .top_container p {
@@ -181,8 +179,7 @@ color: black;
   font-size: 23px;
   padding-top: 30px;
   color: rgb(15, 15, 14);
-	text-shadow: rgb(240, 240, 227) 1px 0 10px;
-
+  text-shadow: rgb(240, 240, 227) 1px 0 10px;
 }
 /* ---メイン画面のデザイン--- */
 
@@ -205,11 +202,7 @@ color: black;
   width: 270px;
   height: 208px;
   /* overflow: hidden; */
-
 }
-
-
-
 
 .title_img {
   background: orange;
@@ -228,12 +221,11 @@ color: black;
   /* position: absolute; */
 }
 
-.relative h3  {
-font-size: 16px;
-padding: 0;
-margin: 5px;
+.relative h3 {
+  font-size: 16px;
+  padding: 0;
+  margin: 5px;
 }
-
 
 .like {
   color: green;
@@ -246,7 +238,6 @@ margin: 5px;
 /* .color {１
   font-size: 30px;
 } */
-
 
 /* .oudio_Size {
   width: 120px;
@@ -266,7 +257,7 @@ margin: 5px;
   margin: auto;
   text-align: center;
   font-size: 1.6rem;
-  white-space: nowrap
+  white-space: nowrap;
 }
 /* 
 .box {
@@ -296,20 +287,26 @@ margin: 5px;
   margin: 4px;
   text-align: center;
   overflow: hidden;
-
 }
 
 .absolute:hover {
-  transition-property: height;
-  transition-duration: 0.4s;
-	transition-delay: .8s;
+  /* transition-property: height; */
+  /* transition-duration: 0.4s;
+	transition-delay: .8s; */
   position: absolute;
   top: -30px;
   left: -40px;
   background: black;
   width: 350px;
-  height: 400px;
+  height: 260px;
   z-index: 1;
+  animation: boxheight 0.4s ease-in 1.6s forwards;
+}
+
+@keyframes boxheight {
+  100% {
+    height: 400px;
+  }
 }
 
 /* プレイリスト */
@@ -333,42 +330,37 @@ margin: 5px;
   pointer-events: none;
 }
 
-
 .playlist_li {
-padding: 10px 0 0px;
-margin: 4px;
-font-size: 16px;
-/* width: 100%; */
-text-align: center;
-font-family: sans-serif;
-white-space: nowrap;
+  padding: 10px 0 0px;
+  margin: 4px;
+  font-size: 16px;
+  /* width: 100%; */
+  text-align: center;
+  font-family: sans-serif;
+  white-space: nowrap;
 
-/* color: green; */
-
+  /* color: green; */
 }
 
 .mask {
-	background: rgba(0, 0, 0, 0.7);
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	z-index: 9;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
 }
 
 .color {
   color: green;
   font-size: 32px;
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
 }
-
-
-
 
 /* フッター */
 .footer_container {
   background: rgb(10, 10, 10);
   height: 200px;
-  width: 100%; 
+  width: 100%;
 }

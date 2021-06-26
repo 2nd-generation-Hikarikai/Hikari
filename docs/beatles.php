@@ -24,6 +24,7 @@ $output = '';
 foreach ($musicAll as $key => $music) {
   // var_dump($music['music_id']);
   // exit();
+  ///////
   $output .= "
   <li class='relative'>
   <div id='absolute' class='absolute' ontouchstart>
