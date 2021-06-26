@@ -128,25 +128,24 @@ foreach ($musicAll as $key => $music) {
   </header>
   <main>
     <div class="top_container">
-      <img src="./img/get.back.jpg" alt="" width="900px">
+      <img src="./img/get.back.jpg">
       <!-- メイン画面のデザイン -->
-      <p id="title">映画『ゲット・バック』が2021年11月25日に世界同時劇場公開！<br>
-        42分間の「ルーフトップ・コンサート」を含む60時間の未発表映像、 <br>
-        150時間の未発表音源を再編集</p>
+      <div class="middle_container">
+        <p class="title">The Beatles</p>
+        <p class="info">映画『ゲット・バック』が2021年11月25日に世界同時劇場公開！<br>
+          42分間の「ルーフトップ・コンサート」を含む60時間の未発表映像、 <br>
+          150時間の未発表音源を再編集</p>
+      </div>
     </div>
     <div class="main_container">
-
       <ul class="row">
-
         <?= $output ?>
       </ul>
     </div>
     <div id="mask"></div>
-
   </main>
   <footer>
     <div class="footer_container">
-
     </div>
   </footer>
 

@@ -60,7 +60,7 @@
         </ul>
 
         <div class="main_wrap transparent">
-            <h1 class="transparent ">Hello Hikarify !</h1>
+            <h1 class="transparent">Hello Hikarify !</h1>
 
             <!-- <form action="signup.php" method="post" autocomplete="off" class="transparent">
                 <div class="transparent">
