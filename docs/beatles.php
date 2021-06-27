@@ -35,7 +35,7 @@ foreach ($musicAll as $key => $music) {
       </div>
     </div>
     <div class='music_title'>{$music['music_name']}</div>
-    <audio controls>
+    <audio controls controlslist='nodownload'>
       <source src='./music/{$music['music_name']}.mp3'>
     </audio>
     <h3>Trivia</h3>

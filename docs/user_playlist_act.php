@@ -41,7 +41,7 @@ foreach ($result as $record2) {
     </div>
     <div class='song_wrap'>
         <h2>{$record2["music_name"]}</h2>
-        <audio controls>
+        <audio controls controlslist='nodownload'>
         <source src='./music/{$record2['music_name']}.mp3'>
         </audio>
     </div>
