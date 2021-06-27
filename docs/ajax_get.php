@@ -11,7 +11,7 @@ $myselect = $_POST["myselect"];
 
 // db連携
 $pdo = connect_to_db();
-$sql = "SELECT * FROM music_table WHERE feel1 LIKE :myselect";
+$sql = "SELECT * FROM music_table WHERE feel1 LIKE :myselect OR feel2 LIKE :myselect" ;
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':myselect', "%{$myselect}%", PDO::PARAM_STR);
 $status = $stmt->execute();
